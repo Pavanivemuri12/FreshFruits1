@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const BasicFruits = require('../models/BasicFruitsModel')
+const BasicFruits = require('../models/BasicFruits')
 //const validate = require('../config/auth')
 
 router.get('/count', async (req, res) => {

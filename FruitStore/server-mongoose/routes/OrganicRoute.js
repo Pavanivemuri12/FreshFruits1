@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const OrganicFruits = require('../models/OrganicModel')
+const OrganicFruits = require('../models/OrganicFruits')
 // const validate = require('../config/auth')
 
 // router.get('/count', async (req, res) => {
