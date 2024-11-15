@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const seasonalFruits = require('../models/SeasonalModel')
+const OrganicFruits = require('../models/OrganicModel')
 // const validate = require('../config/auth')
 
 // router.get('/count', async (req, res) => {
@@ -14,8 +14,8 @@ const seasonalFruits = require('../models/SeasonalModel')
 // Method : GET  || API : localhost:3000/products/all
 router.get('/all', async (req, res) => {
     try {
-        const seasonalfruits = await SeasonalFruits.find()
-        return res.status(200).json(seasonalfruits)
+        const organicfruits = await OrganicFruits.find()
+        return res.status(200).json(organicfruits)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
@@ -24,13 +24,13 @@ router.get('/all', async (req, res) => {
 // Method : POST  || API : localhost:3000/products/add
 router.post('/add', async (req, res) => {
     try {
-        const newseasonalfruit = new SeasonalFruits(req.body)
-        const { title, img, price } = newseasonalfruit
+        const neworganicfruit = new OrganicFruits(req.body)
+        const { title, img, price } = neworganicfruit
         if (!title || !img || !price) {
             return res.status(400).json({ message: "All fields required" })
         }
-        await newseasonalfruit.save()
-        return res.status(200).json(newseasonalfruit)
+        await neworganicfruit.save()
+        return res.status(200).json(neworganicfruit)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
@@ -40,12 +40,12 @@ router.post('/add', async (req, res) => {
 router.put('/edit/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const existingseasonalfruit = await SeasonalFruits.findOne({ _id: id })
-        if (!existingseasonalfruit) {
-            return res.status(404).json({ message: "seasonalfruits are not found" })
+        const existingorganicfruit = await OrganicFruits.findOne({ _id: id })
+        if (!existingorganicfruit) {
+            return res.status(404).json({ message: "Product not found" })
         }
-        const updatedseasonalfruit = await SeasonalFruits.findByIdAndUpdate(id, req.body, { new: true })
-        return res.status(200).json(updatedseasonalfruit)
+        const updatedorganicfruit = await OrganicFruits.findByIdAndUpdate(id, req.body, { new: true })
+        return res.status(200).json(updatedorganicfruit)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
@@ -55,12 +55,12 @@ router.put('/edit/:id', async (req, res) => {
 router.delete('/delete/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const updatedseasonalfruit = await SeasonalFruits.findOne({ _id: id })
-        if (!updatedseasonalfruit) {
-            res.status(404).json({ message: "seasonalfruits are not found" })
+        const updatedorganicfruit = await OrganicFruits.findOne({ _id: id })
+        if (!updatedorganicfruit) {
+            res.status(404).json({ message: "organicfruits are not found" })
         }
-        await SeasonalFruits.findByIdAndDelete(id)
-        return res.status(200).json({ message: "seasonalfruits is Deleted" })
+        await OrganicFruits.findByIdAndDelete(id)
+        return res.status(200).json({ message: "organicfruit is Deleted" })
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
