@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const SeasonalFruits = require('../models/SeasonalFruits')
+const seasonalFruits = require('../models/SeasonalFruits')
 // const validate = require('../config/auth')
 
 router.get('/count', async (req, res) => {

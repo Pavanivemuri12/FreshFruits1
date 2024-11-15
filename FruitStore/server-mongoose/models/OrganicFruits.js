@@ -19,10 +19,3 @@ const OrganicFruitsSchema = new mongoose.Schema({
 const OrganicFruits = mongoose.model("OrganicFruits", OrganicFruitsSchema)
 
 module.exports = OrganicFruits
-
-
-
-// name: string :required
-// email: string: required : unique
-// phone: number: required : unique
-// address: string 
