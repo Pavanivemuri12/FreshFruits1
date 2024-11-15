@@ -13,6 +13,7 @@ const App = () => {
                     <Route element={<WebLayout />}>
                     <Route path='/' element={<Home />} />
                     <Route path='/contact' element={<Contacts />} />
+                    <Route path='/location' element={<Location />} />
                     </Route>
                   
                 </Routes> 
