@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Loaction = () => {
+const Location = () => {
   return (
-    <div>Loaction</div>
+    <div>Location</div>
   )
 }
 
-export default Loaction
+export default Location

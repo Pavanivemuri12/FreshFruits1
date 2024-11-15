@@ -3,6 +3,7 @@ import WebLayout from "./Layout/WebLayout";
 import Home from "./pages/Home"
 import Location from "./pages/Location";
 import Contacts from "./pages/Contacts";
+import About from "./pages/About";
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
                     <Route path='/' element={<Home />} />
                     <Route path='/contact' element={<Contacts />} />
                     <Route path='/location' element={<Location />} />
+                    <Route path='/about' element={<About/>} />
                     </Route>
                   
                 </Routes> 
