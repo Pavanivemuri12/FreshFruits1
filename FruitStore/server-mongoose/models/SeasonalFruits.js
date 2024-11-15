@@ -16,6 +16,6 @@ const SeasonalFruitsSchema = new mongoose.Schema({
 })
 
 
-const SeasonalFruits = mongoose.model("OrganicFruits", SeasonalFruitsSchema)
+const SeasonalFruits = mongoose.model("SeasonalFruits", SeasonalFruitsSchema)
 
 module.exports = SeasonalFruits;
