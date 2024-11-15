@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router();
-const Products = require('../models/ProductsModel')
-const validate = require('../config/auth')
+const DryFruits= require('../models/DryFruits')
+//const validate = require('../config/auth')
 
 router.get('/count', async (req, res) => {
     try {
-        const count = await Products.countDocuments()
+        const count = await DryFruits.countDocuments()
         return res.status(200).json({ count: count })
     } catch (error) {
         return res.status(500).json({ message: error.message })
@@ -14,8 +14,8 @@ router.get('/count', async (req, res) => {
 // Method : GET  || API : localhost:3000/products/all
 router.get('/all', async (req, res) => {
     try {
-        const products = await Products.find()
-        return res.status(200).json(products)
+        const dryfruits = await DryFruits.find()
+        return res.status(200).json(dryfruits)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
@@ -24,13 +24,13 @@ router.get('/all', async (req, res) => {
 // Method : POST  || API : localhost:3000/products/add
 router.post('/add', async (req, res) => {
     try {
-        const newproduct = new Products(req.body)
-        const { title, img, price } = newproduct
+        const newfruits = new DryFruits(req.body)
+        const { title, img, price } = newfruits
         if (!title || !img || !price) {
             return res.status(400).json({ message: "All fields required" })
         }
-        await newproduct.save()
-        return res.status(200).json(newproduct)
+        await newfruits.save()
+        return res.status(200).json(newfruits)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
@@ -40,12 +40,12 @@ router.post('/add', async (req, res) => {
 router.put('/edit/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const existingproduct = await Products.findOne({ _id: id })
-        if (!existingproduct) {
-            return res.status(404).json({ message: "Product not found" })
+        const existingfruit = await DryFruits.findOne({ _id: id })
+        if (!existingfruit) {
+            return res.status(404).json({ message: "Dry Fruits not found" })
         }
-        const updatedproduct = await Products.findByIdAndUpdate(id, req.body, { new: true })
-        return res.status(200).json(updatedproduct)
+        const updatedfruit = await DryFruits.findByIdAndUpdate(id, req.body, { new: true })
+        return res.status(200).json(updatedfruit)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
@@ -55,12 +55,12 @@ router.put('/edit/:id', async (req, res) => {
 router.delete('/delete/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const existingproduct = await Products.findOne({ _id: id })
-        if (!existingproduct) {
-            res.status(404).json({ message: "Product not found" })
+        const existingfruit = await DryFruits.findOne({ _id: id })
+        if (!existingfruit) {
+            res.status(404).json({ message: "Dry Fruits not found" })
         }
-        await Products.findByIdAndDelete(id)
-        return res.status(200).json({ message: "Product Deleted" })
+        await DryFruits.findByIdAndDelete(id)
+        return res.status(200).json({ message: "Dry Fruits Deleted" })
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }

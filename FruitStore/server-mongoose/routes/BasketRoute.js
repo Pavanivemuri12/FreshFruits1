@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router();
-const Products = require('../models/ProductsModel')
-const validate = require('../config/auth')
+const FruitBaskets = require('../models/FruitBaskets')
+//const validate = require('../config/auth')
 
 router.get('/count', async (req, res) => {
     try {
-        const count = await Products.countDocuments()
+        const count = await FruitBaskets.countDocuments()
         return res.status(200).json({ count: count })
     } catch (error) {
         return res.status(500).json({ message: error.message })
@@ -14,8 +14,8 @@ router.get('/count', async (req, res) => {
 // Method : GET  || API : localhost:3000/products/all
 router.get('/all', async (req, res) => {
     try {
-        const products = await Products.find()
-        return res.status(200).json(products)
+        const fruitbaskets = await FruitBaskets.find()
+        return res.status(200).json(fruitbaskets)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
@@ -24,13 +24,13 @@ router.get('/all', async (req, res) => {
 // Method : POST  || API : localhost:3000/products/add
 router.post('/add', async (req, res) => {
     try {
-        const newproduct = new Products(req.body)
-        const { title, img, price } = newproduct
+        const newbasket = new FruitBaskets(req.body)
+        const { title, img, price } = newbasket
         if (!title || !img || !price) {
             return res.status(400).json({ message: "All fields required" })
         }
-        await newproduct.save()
-        return res.status(200).json(newproduct)
+        await newbasket.save()
+        return res.status(200).json(newbasket)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
@@ -40,12 +40,12 @@ router.post('/add', async (req, res) => {
 router.put('/edit/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const existingproduct = await Products.findOne({ _id: id })
-        if (!existingproduct) {
-            return res.status(404).json({ message: "Product not found" })
+        const existingbasket = await FruitBaskets.findOne({ _id: id })
+        if (!existingbasket) {
+            return res.status(404).json({ message: "Fruit Basket not found" })
         }
-        const updatedproduct = await Products.findByIdAndUpdate(id, req.body, { new: true })
-        return res.status(200).json(updatedproduct)
+        const updatedbasket = await FruitBaskets.findByIdAndUpdate(id, req.body, { new: true })
+        return res.status(200).json(updatedbasket)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
@@ -55,12 +55,12 @@ router.put('/edit/:id', async (req, res) => {
 router.delete('/delete/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const existingproduct = await Products.findOne({ _id: id })
-        if (!existingproduct) {
-            res.status(404).json({ message: "Product not found" })
+        const existingbasket = await FruitBaskets.findOne({ _id: id })
+        if (!existingbasket) {
+            res.status(404).json({ message: "Fruit Basket not found" })
         }
-        await Products.findByIdAndDelete(id)
-        return res.status(200).json({ message: "Product Deleted" })
+        await FruitBaskets.findByIdAndDelete(id)
+        return res.status(200).json({ message: "Fruit Basket Deleted" })
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }

@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 const OrganicFruitsSchema = new mongoose.Schema({
-    title: {
-        type: String,
-        required: true
+    title: { // Property/Filed title
+        type: String, // Data type of the Property
+        required: true // Nullable(false) or NotNullable(true) 
     },
     img: {
         type: String,
@@ -11,11 +11,11 @@ const OrganicFruitsSchema = new mongoose.Schema({
     },
     price: {
         type: Number,
-        required: true
+        required: true,
+        // unique:true
     },
 })
 
-
 const OrganicFruits = mongoose.model("OrganicFruits", OrganicFruitsSchema)
 
-module.exports = OrganicFruits;
+module.exports = OrganicFruits

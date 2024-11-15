@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const BasicFruits = require('../models/BasicFruitsModel')
+const BasicFruits = require('../models/BasicFruits')
 //const validate = require('../config/auth')
 
 router.get('/count', async (req, res) => {
@@ -40,12 +40,12 @@ router.post('/add', async (req, res) => {
 router.put('/edit/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const existingbasic = await Products.findOne({ _id: id })
-        if (!existingproduct) {
-            return res.status(404).json({ message: "Product not found" })
+        const existingbasic = await BasicFruits.findOne({ _id: id })
+        if (!existingbasic) {
+            return res.status(404).json({ message: "Basic Fruits not found" })
         }
-        const updatedproduct = await Products.findByIdAndUpdate(id, req.body, { new: true })
-        return res.status(200).json(updatedproduct)
+        const updatedbasic = await BasicFruits.findByIdAndUpdate(id, req.body, { new: true })
+        return res.status(200).json(updatedbasic)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
@@ -55,12 +55,12 @@ router.put('/edit/:id', async (req, res) => {
 router.delete('/delete/:id', async (req, res) => {
     try {
         const id = req.params.id
-        const existingproduct = await Products.findOne({ _id: id })
-        if (!existingproduct) {
-            res.status(404).json({ message: "Product not found" })
+        const existingbasic = await BasicFruits.findOne({ _id: id })
+        if (!existingbasic) {
+            res.status(404).json({ message: "Basic Fruits not found" })
         }
-        await Products.findByIdAndDelete(id)
-        return res.status(200).json({ message: "Product Deleted" })
+        await BasicFruits.findByIdAndDelete(id)
+        return res.status(200).json({ message: "Basic Fruit Deleted" })
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
