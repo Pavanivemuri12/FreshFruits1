@@ -1,18 +1,24 @@
 import Leftbar from '../components/Leftbar'
 import Navbar from '../components/Navbar'
 import {Outlet} from 'react-router-dom'
+import Home from '../pages/Home'
 
 const WebLayout = () => {
   return (
     <>
     <div className=''>
         <Navbar/>
-        <div className="w-screen h-screen flex flex-row justify-start items-center">
-        <div className="w-[18vw] h-screen flex flex-col left-0 top-0">
-        <Leftbar/>
+        <div className=" flex flex-row gap-0  justify-start items-center">
+        <div className="w-[18vw] h-screen flex  left-0 top-0">
+        <Leftbar/></div>
+        { <div className=" gap-5 flex justify-end items-end  flex-row left-0 top-0">
+        <Home/>
+        </div> }
+
         </div>
-        </div>
+
         <Outlet />
+
     </div></>
   )
 }
