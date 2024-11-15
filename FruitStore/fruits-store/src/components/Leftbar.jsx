@@ -1,44 +1,51 @@
 import { NavLink } from "react-router-dom"
-import {User} from 'lucide-react'
 
-const Navbar = () => {
+
+const Leftbar = () => {
 
     const Linksdata = [
+       
         {
-            title: 'Home',
-            path: '/'
+            title: 'BasicFruits',
+            path: '/basicfruits'
         },
         {
-            title: 'Location',
-            path: '/location'
+            title:'DryFruits',
+            path:'/dryfruits'
         },
         {
-            title:'About',
-            path:'/about'
+            title: 'ExoticFruits',
+            path: '/exoticfruits'
         },
         {
-            title: 'Contact',
-            path: '/contact'
+            title: 'FruitBasket',
+            path: '/fruitbasket'
+        },
+        {
+            title: 'OrganicFruits',
+            path: '/organicfruits'
+        },
+        {
+            title: 'SeasonalFruits',
+            path: '/seasonalfruits'
         }
+        
+
     ]
     return (
         <>
-            <div className='w-screen h-14 shadow-lime-300  bg-lime-600 shadow-md flex flex-row justify-center items-center'>
-                <div className='w-[40%] flex justify-start items-center font-bold text-2xl text-white'>
-                   Fresh Fruits
-                </div>
-                <div className='w-[50%] h-full flex justify-end items-center '>
-                    <div className='w-full h-full flex flex-row justify-end items-center gap-8 font-bold'>
+            <div className='w-full h-screen  shadow-md  shadow-green-400 flex  justify-center items-center'>
+                <div className='h-full w-full flex flex-col'>
+                    <div className='h-[80%] w-full flex flex-col justify-start items-center'>
                         {Linksdata.map((link, index) => (
-                            <NavLink to={link.path} key={index} className='h-[65%] w-20 hover:bg-white hover:text-lime-600 text-white flex justify-center items-center rounded-sm'>
+                            <NavLink to={link.path} key={index} className='h-[10%] w-full px-8 hover:bg-lime-400 hover:text-white font-bold flex justify-start items-center rounded-sm shadow-md'>
                                 {link.title}
                             </NavLink>
                         ))
                         }
                     </div>
-                    <button className="h-9 w-9 flex justify-center items-center border-2  rounded-full hover:bg-white hover:border-lime-600 hover:text-lime-600 ml-4 shadow-md" onClick={() => { setShowLogin(!showLogin) }}>
-                    <User className="h-6 w-6 text-white" />
-                    </button>
+                   
+            
                 </div>
             </div> 
             
@@ -96,4 +103,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Leftbar
