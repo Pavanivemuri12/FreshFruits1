@@ -14,11 +14,12 @@ import HomeCarousel from "../components/HomeCarousel"
 const Home = () => {
     return (
         <>
-            <div className="flex flex-row justify-end items-start gap-8 w-screen h-full">
+       
+            {/* <div className="flex flex-row justify-end items-start gap-8 w-screen h-full">
                 <HomeCarousel />
-                {/* <HomeCards /> */}
+               <HomeCards /> 
                 
-            </div>
+            </div> */}
         </>
     )
 }

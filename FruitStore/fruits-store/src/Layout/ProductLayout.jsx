@@ -10,9 +10,7 @@ const ProductLayout = () => {
        
 
    
-        <div>
-          <BasicFruits/>
-        </div>
+        
         <Outlet />
 
     </div>
