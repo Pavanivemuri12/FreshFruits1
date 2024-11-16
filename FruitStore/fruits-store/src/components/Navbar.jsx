@@ -37,7 +37,7 @@ const Navbar = () => {
                         }
                     </div>
                     <button className="h-9 w-9 flex justify-center items-center border-2  rounded-full hover:bg-white hover:border-lime-600 hover:text-lime-600 ml-4 shadow-md" onClick={() => { setShowLogin(!showLogin) }}>
-                    <User className="h-6 w-6 text-white" />
+                    <User className="h-6 w-6 text-white hover:text-lime-500" />
                     </button>
                 </div>
             </div> 
