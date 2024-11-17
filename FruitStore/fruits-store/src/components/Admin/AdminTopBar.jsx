@@ -14,7 +14,7 @@ const AdminTopBar = () => {
     {
       title: "Categories",
       hasDropdown: true,
-      path: "/admin/categories",
+      path: false,
     },
     {
       title: "Orders",

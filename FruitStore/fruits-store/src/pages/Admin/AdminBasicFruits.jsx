@@ -1,17 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import AdminPageHeader from "../../components/Admin/AdminPageHeader";
 import { Loader2, Pencil, Plus, Trash, TriangleAlert, X } from "lucide-react";
-import { getBasicFruits } from "../../api/Api";
+import { addBasicFruits, getBasicFruits,deleteBasicFruits,editBasicFruits } from "../../api/Api";
 import {toast} from 'sonner'
+//import BasicFruits from "../BasicFruits";
 const AdminBasicFruits = () => {
   //null -> products[] | Store the data
-  const [products, setProducts] = useState(null);
+  const [basicfruits, setBasicFruits] = useState(null);
   //true (shows loading screen) -> false(hide loading screen) | Condition Render
   const [loading, setLoading] = useState(true);
   const [currentProduct, setCurrentProduct] = useState(null)
   const [showAdd, setShowAdd] = useState(false);
   const [showEdit, setShowEdit] = useState(false)
-  const nameRef = useRef("");
+  const titleRef = useRef("");
   const imgRef = useRef("");
   const priceRef = useRef(0);
   const fetchData = async () => {
@@ -19,7 +20,7 @@ const AdminBasicFruits = () => {
       const res = await getBasicFruits();
       if (res.status === 200) {
         console.log(res.data);
-        setProducts(res.data);
+        setBasicFruits(res.data);
       }
     } catch (error) {
       console.error(error);
@@ -27,62 +28,62 @@ const AdminBasicFruits = () => {
       setLoading(false);
     }
   };
-  // const handleAdd = async (e) => {
-  //   e.preventDefault();
-  //   const product = {
-  //     name: nameRef.current.value,
-  //     img: imgRef.current.value,
-  //     price: parseInt(priceRef.current.value),
-  //   };
-  //   console.log(product);
-  //   try {
-  //     const response = await addProduct(product);
-  //     if (response.status === 200) {
-  //       console.log("Product Added");
-  //       toast.success('Product Added')
-  //       setShowAdd(false);
-  //       fetchData();
-  //     }
-  //   } catch (error) {
-  //     toast.error("Error while Adding")
-  //     console.error(error);
-  //   }
-  // };
+  const handleAdd = async (e) => {
+    e.preventDefault();
+    const basicfruits = {
+      title: titleRef.current.value,
+      img: imgRef.current.value,
+      price: priceRef.current.value
+    };
+    console.log(basicfruits);
+    try {
+      const response = await addBasicFruits(basicfruits)
+      if (response.status === 200) {
+        console.log("Product Added");
+        toast.success('Product Added')
+        setShowAdd(false);
+        fetchData();
+      }
+    } catch (error) {
+      toast.error("Error while Adding")
+      // console.error(error);
+    }
+  };
 
-  // const editHelper = (product) => {
-  //   setCurrentProduct(product)
-  //   setShowEdit(true)
+  const editHelper = (product) => {
+    setCurrentProduct(product)
+    setShowEdit(true)
 
-  // }
-  // const handleEdit = async (e) => {
-  //   e.preventDefault()
-  //   const product = {
-  //     title: nameRef.current.value,
-  //     img: imgRef.current.value,
-  //     price: priceRef.current.value
-  //   }
-  //   try {
-  //     const response = await editProduct(product, currentProduct._id)
-  //     if (response.status === 200) {
-  //       setShowEdit(!showEdit)
-  //       fetchData()
-  //       //info("Product Updated !")
-  //     }
-  //   } catch (error) {
-  //     error("Error while Updating")
-  //   }
-  // }
-  // const handleDelete = async (id) => {
-  //   try {
-  //     const response = await deleteproduct(id);
-  //     if (response.status === 200) {
-  //       console.log("Product deleted");
-  //       fetchData();
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+  }
+  const handleEdit = async (e) => {
+    e.preventDefault()
+    const product = {
+      title: titleRef.current.value,
+      img: imgRef.current.value,
+      price: priceRef.current.value
+    }
+    try {
+      const response = await editBasicFruits(product, currentProduct._id)
+      if (response.status === 200) {
+        setShowEdit(!showEdit)
+        fetchData()
+        //info("Product Updated !")
+      }
+    } catch (error) {
+      toast.error("Error while Updating")
+    }
+  }
+  const handleDelete = async (id) => {
+    try {
+      const response = await deleteBasicFruits(id);
+      if (response.status === 200) {
+        console.log("Product deleted");
+        fetchData();
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   useEffect(() => {
     fetchData();
@@ -97,7 +98,7 @@ const AdminBasicFruits = () => {
       </>
     );
   }
-  if (!products || products.length === 0) {
+  if (!basicfruits || basicfruits.length === 0) {
     return (
       <>
         <div className="w-screen h-[90vh] flex flex-col justify-center items-center">
@@ -115,7 +116,7 @@ const AdminBasicFruits = () => {
           className="w-10 h-10 font-bold flex justify-center items-center border-2 border-green-500 rounded-md
          text-green-500 shadow-md hover:text-white hover:bg-green-500 hover:shadow-md
           hover:shadow-green-400"
-          // onClick={() => setShowAdd(!showAdd)}
+          onClick={() => setShowAdd(!showAdd)}
         >
           <Plus className="w-8 h-8" />
         </button>
@@ -131,7 +132,7 @@ const AdminBasicFruits = () => {
           </tr>
         </thead>
         <tbody>
-          {products.map((product, index) => (
+          {basicfruits.map((product, index) => (
             <tr key={index}>
               <td className="p-4">{product._id} </td>
               <td className="p-4">{product.title} </td>
@@ -147,16 +148,16 @@ const AdminBasicFruits = () => {
               <td className="p-4 flex h-full w-full flex-row justify-start items-center gap-4">
                 <button
                   className="h-15 w-15 border-blue-500 border-2 p-1 rounded-md text-blue-500 shadow-md
-               hover:bg-blue-500 hover:text-white hover:shadow-blue-500">
-               {/* onClick={() => { editHelper(product) }} > */}
+               hover:bg-blue-500 hover:text-white hover:shadow-blue-500"
+               onClick={() => { editHelper(product) }} >
                   <Pencil />
                 </button>
                 <button
                   className="h-15 w-15 border-red-500 border-2 p-1 rounded-md text-red-500 shadow-md
                hover:bg-red-500 hover:text-white hover:shadow-red-500"
-                  // onClick={() => {
-                  //   handleDelete(product._id);
-                  // }}
+                  onClick={() => {
+                    handleDelete(product._id);
+                  }}
                 >
                   <Trash />
                 </button>
@@ -166,7 +167,7 @@ const AdminBasicFruits = () => {
         </tbody>
       </table>
 
-      {/* {showAdd && (
+       {showAdd && (
         <>
           <div className="absolute top-0 left-0 z-50 h-screen w-screen flex justify-center items-center bg-black/40 ">
             <div className="h-[55%] w-1/3 flex flex-col justify-center items-center bg-white shadow-2xl rounded-md">
@@ -191,7 +192,7 @@ const AdminBasicFruits = () => {
                   <input
                     ref={titleRef}
                     type="text"
-                    name=""
+                    title=""
                     id="title"
                     placeholder="Title"
                     className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
@@ -226,7 +227,7 @@ const AdminBasicFruits = () => {
             </div>
           </div>
         </>
-      )}
+      )} 
       {showEdit && (
         <>
           <div className="absolute top-0 left-0 z-50 h-screen w-screen flex justify-center items-center bg-black/40 ">
@@ -239,7 +240,7 @@ const AdminBasicFruits = () => {
                   </div>
                 </div>
                 <form className='h-[70%] w-[80%] flex flex-col justify-center items-center gap-8' onSubmit={handleEdit}>
-                  <input ref={nameRef} type="text" name="" id="name" placeholder='Title' defaultValue={currentProduct.name} className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-blue-400 rounded-sm' required autoFocus />
+                  <input ref={titleRef} type="text" name="" id="name" placeholder='Title' defaultValue={currentProduct.title} className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-blue-400 rounded-sm' required autoFocus />
                   <input ref={imgRef} type="text" name="" id="img" placeholder='Image URL' defaultValue={currentProduct.img} className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-blue-400 rounded-sm' required />
                   <input ref={priceRef} type="number" name="" id="price" placeholder='Price' defaultValue={currentProduct.price} className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-blue-400 rounded-sm' required />
                   <button type="submit" className="w-full h-[3rem]  shadow-lg shadow-gray-400 hover:shadow-blue-400 bg-blue-500 text-white rounded-sm outline-none">Save</button>
@@ -248,7 +249,7 @@ const AdminBasicFruits = () => {
             </div>
           </div>
         </> 
-      )}*/}
+      )} 
     </div>
   );
 };
