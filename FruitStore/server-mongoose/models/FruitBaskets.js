@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const FruitBasketSchema = new mongoose.Schema({
+const FruitBasketsSchema = new mongoose.Schema({
     title: { // Property/Filed title
         type: String, // Data type of the Property
         required: true // Nullable(false) or NotNullable(true) 
@@ -16,9 +16,9 @@ const FruitBasketSchema = new mongoose.Schema({
     },
 })
 
-const FruitBasket = mongoose.model("FruitBasket", FruitBasketSchema)
+const FruitBaskets = mongoose.model("FruitBaskets", FruitBasketsSchema)
 
-module.exports =FruitBasket
+module.exports =FruitBaskets
 
 
 
