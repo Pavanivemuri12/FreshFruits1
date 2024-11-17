@@ -6,6 +6,9 @@ import ExoticFruits from '../pages/ExoticFruits'
 import OrganicFruits from '../pages/OrganicFruits'
 import SeasonalFruits from '../pages/SeasonalFruits'
 import FruitBaskets from '../pages/FruitBaskets'
+import About from '../pages/About'
+import Contact from '../pages/Contact'
+import Location from '../pages/Location'
 const ProductLayout = () => {
   return (
     <>
