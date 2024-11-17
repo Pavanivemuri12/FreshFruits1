@@ -37,7 +37,7 @@ const AdminExoticFruits = () => {
     };
     console.log(exoticfruits);
     try {
-      const response = await addexoticFruits(exoticfruits)
+      const response = await addExoticFruits(exoticfruits)
       if (response.status === 200) {
         console.log("Product Added");
         toast.success('Product Added')
@@ -111,7 +111,7 @@ const AdminExoticFruits = () => {
   return (
     <div className="w-full flex flex-col justify-start items-start">
       <div className="w-full flex flex-row justify-between items-center my-4 shadow-md rounded-md p-1 border">
-        <AdminPageHeader title="Dry Fruits" />
+        <AdminPageHeader title="Exotic Fruits" />
         <button
           className="w-10 h-10 font-bold flex justify-center items-center border-2 border-green-500 rounded-md
          text-green-500 shadow-md hover:text-white hover:bg-green-500 hover:shadow-md
