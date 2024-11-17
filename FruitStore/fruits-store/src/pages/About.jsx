@@ -145,7 +145,7 @@ const About = () => {
  <div className="flex flex-col justify-center items-center  h-[25vh] w-[25vw]">
 <img className="h-[25vh] w-[15vw] top-10 bottom-10 object-cover object-top flex justify-center align-center " src={divya} alt="divya" />
 <div>
-<p font-sans-serif>Trusted site for Fruit Purchase.d</p>
+<p font-sans-serif>Trusted site for Fruit Purchased</p>
 </div>
 <br></br>
  <br></br>
