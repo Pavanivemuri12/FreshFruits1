@@ -22,6 +22,7 @@ import AdminExoticFruits from "./pages/Admin/AdminExoticFruits";
 import AdminOrganicFruits from "./pages/Admin/AdminOrganicFruits";
 import AdminSeasonalFruits from "./pages/Admin/AdminSeasonalFruits";
 import AdminFruitBaskets from "./pages/Admin/AdminFruitBaskets";
+import AdminUsers from "./pages/Admin/AdminUsers";
 
 
 
@@ -61,6 +62,7 @@ const App = () => {
                     <Route path='/admin/organicfruits' element={<OrganicFruits />} />
                     <Route path='/admin/seasonalfruits' element={<SeasonalFruits />} />
                     <Route path='/admin/fruitbasket' element={<FruitBaskets />} />
+                    <Route path='/admin/users' element={<AdminUsers />} />
                     </Route>
                 </Routes> 
             </BrowserRouter>
