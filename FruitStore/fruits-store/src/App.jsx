@@ -22,7 +22,7 @@ const App = () => {
                     </Route>
                     <Route element={<WebLayout />}>
                     <Route path='/' element={<Home />} />
-                    <Route path='/contact' element={<Contacts />} />
+                    <Route path='/contact' element={<Contact />} />
                     <Route path='/location' element={<Location />} />
                     <Route path='/about' element={<About/>} />
                     <Route element={<ProductLayout />}>
