@@ -24,12 +24,7 @@ const About = () => {
   <br></br>
   <br></br>
   <br></br>
-  <br></br>
-  <br></br>
-  <br></br>
-  <br></br>
-  <br></br>
-  <br></br>
+  <br />
   <h1 class="text-5xl font-semibold font-sans-serif text-black mb-4"  >Welcome to Fresh Fruits an eCommerce website</h1>
   <p class="text-1xl  text-black">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 <br></br>

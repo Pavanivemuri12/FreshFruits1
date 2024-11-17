@@ -31,7 +31,7 @@ const Home = () => {
             <h2 className="text-5xl font-semibold font-sans-serif mb-4">Deal of The Day</h2>
             <p className="text-[40px] text-red-800 font-sans-serif font-medium">Cherry</p>
             <p className=" font-sans  leading-relaxed text-inherit antialiased font-bold flex flex-row text-xl justify-center items-center">
-              <IndianRupee className='h-5 w-6' />500  now  <IndianRupee className='h-5 w-6' />250
+              <IndianRupee className='h-4 w-4' />500  now  <IndianRupee className='h-4 w-4' />250
             </p>
             <br></br>
             <CountdownTimer/>

@@ -22,8 +22,8 @@ const OrdersSchema = new mongoose.Schema({
         required: true,
     },
     orderedAt: {
-        type: Date,
-        default: Date.now,
+        type: String,
+        required:true,
     }
 })
 
