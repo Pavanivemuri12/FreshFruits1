@@ -29,14 +29,14 @@ const App = () => {
                     <Route path='/about' element={<About/>} />
                     <Route element={<ProductLayout />}>
                     <Route path='/basicfruits' element={<BasicFruits />} />
-                    </Route>     
+             
                     <Route path='/dryfruits' element={<DryFruits />} />
                     <Route path='/exoticfruits' element={<ExoticFruits />} />
                     <Route path='/organicfruits' element={<OrganicFruits />} />
                     <Route path='/seasonalfruits' element={<SeasonalFruits />} />
                     <Route path='/fruitbasket' element={<FruitBaskets />} />
                     </Route>
-                   
+                    </Route> 
                 </Routes> 
             </BrowserRouter>
         </>
