@@ -47,7 +47,7 @@ const Leftbar = () => {
             >
               <NavLink
                 to={link.path || '#'}
-                className="h-5 text-lg font-semibold text-gray-700 py-3 px-5 hover:text-gray-900 hover:bg-gray-400 transition duration-200"
+                className="h-5 text-lg font-semibold text-white py-3 px-5 hover:text-white hover:bg-lime-500 transition duration-200"
               >
                 {link.title}
               </NavLink>
@@ -60,7 +60,7 @@ const Leftbar = () => {
                       <NavLink
                         key={idx}
                         to={category.path}
-                        className="text-gray-700 py-2 px-4 h-8 hover:bg-gray-100 font-semibold rounded-md transition duration-150"
+                        className="text-lime-700 py-2 px-2 h- hover:bg-lime-100 font-semibold rounded-md transition duration-150"
                       >
                         {category.title}
                       </NavLink>

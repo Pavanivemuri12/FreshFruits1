@@ -4,8 +4,9 @@ import React from 'react'
 const ProductCard = ({ img, price, name }) => {
     return (
         <>
-            <div className="relative flex w-[18%] h-30 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-purple-300 to-purple-600">
+
+            <div className="relative flex w-[20%] -mt-1 p-4 h-[65vh] flex-col rounded-xl bg-lime-100 bg-clip-border text-gray-700 shadow-md">
+                <div className="relative mx-4 -mt-0 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-purple-300 to-purple-600">
                     <img src={img} alt={name} className='h-full w-full object-cover' />
                 </div>
                 <div className="p-6">
@@ -34,6 +35,7 @@ const ProductCard = ({ img, price, name }) => {
                     </button>
                 </div>
             </div>
+         
         </>
     )
 }
