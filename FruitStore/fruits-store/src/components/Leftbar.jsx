@@ -36,7 +36,7 @@ const Leftbar = () => {
     return (
         <>
        
-       <div className='w-screen z-10 h-9   bg-lime-200 shadow-md flex flex-row justify-start items-center'>
+       <div className=' z-10 h-9 w-full  bg-white shadow-md flex flex-row justify-start items-center'>
          <div className="relative flex items-start justify-start space-x-8">
            {Linksdata.map((link, index) => (
             <div
@@ -47,7 +47,7 @@ const Leftbar = () => {
             >
               <NavLink
                 to={link.path || '#'}
-                className="h-5 text-lg font-semibold text-white py-3 px-5 hover:text-white hover:bg-lime-500 transition duration-200"
+                className="h-5 text-lg font-semibold text-lime-600 py-3 px-5 hover:text-white hover:bg-lime-500 transition duration-200"
               >
                 {link.title}
               </NavLink>
