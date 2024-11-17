@@ -23,15 +23,16 @@ const Contact = () => {
               <h1 className='text-center'>1/11 ,asd,dfg <br /> wert</h1>
             </div>
           </div>
-          <div className='h-full w-80 flex flex-col justify-center items-center'>
+          <div className='h-100vh w-80 flex flex-col justify-center items-center'>
             <div className='h-screen w-full flex flex-col justify-center items-center text-lg font-semibold'>
-              <h1 className='w-[80%] text-left my-5 font-bold text-green-600'>Get in touch</h1>
-              <form className='h-[60%] w-[80%] flex flex-col justify-center items-center gap-6'>
+              <h1 className='w-[80%] text-left my-3 font-bold text-green-600'>Get in touch</h1>
+              <form className='h-[60%] w-[80%] flex flex-col justify-center items-center gap-5'>
                 <input type="text" name="" id="" placeholder='Name' className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm' />
                 <input type="email" name="" id="" placeholder='Email' className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm' />
                
                 <input type="tel" name="" id="" placeholder='Phone' className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm' />
                 <input type="message" name="" id="" placeholder='Message' className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm' />
+                <button type="submit" className="w-full h-[3rem] shadow-lg shadow-gray-400 hover:shadow-lime-600  bg-lime-600 text-white rounded-sm outline-none">Send Message</button>
                   </form>
             </div>
           </div>
