@@ -22,8 +22,8 @@ const Leftbar = () => {
             path: '/exoticfruits'
         },
         {
-            title: 'FruitBasket',
-            path: '/fruitbasket'
+            title: 'FruitBaskets',
+            path: '/fruitbaskets'
         },
         {
             title: 'OrganicFruits',
