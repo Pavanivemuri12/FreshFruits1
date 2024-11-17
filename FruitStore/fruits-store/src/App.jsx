@@ -22,11 +22,7 @@ import AdminExoticFruits from "./pages/Admin/AdminExoticFruits";
 import AdminOrganicFruits from "./pages/Admin/AdminOrganicFruits";
 import AdminSeasonalFruits from "./pages/Admin/AdminSeasonalFruits";
 import AdminFruitBaskets from "./pages/Admin/AdminFruitBaskets";
-<<<<<<< Updated upstream
-
-=======
 import AdminOrders from "./pages/Admin/AdminOrders"
->>>>>>> Stashed changes
 
 
 const App = () => {
@@ -62,16 +58,10 @@ const App = () => {
                     <Route path='/admin/basicfruits' element={<AdminBasicFruits />} />             
                     <Route path='/admin/dryfruits' element={<AdminDryFruits />} />
                     <Route path='/admin/exoticfruits' element={<AdminExoticFruits />} />
-<<<<<<< Updated upstream
-                    <Route path='/admin/organicfruits' element={<OrganicFruits />} />
-                    <Route path='/admin/seasonalfruits' element={<SeasonalFruits />} />
-                    <Route path='/admin/fruitbasket' element={<FruitBaskets />} />
-=======
                     <Route path='/admin/organicfruits' element={<AdminOrganicFruits />} />
                     <Route path='/admin/seasonalfruits' element={<AdminSeasonalFruits />} />
                     <Route path='/admin/fruitbasket' element={<AdminFruitBaskets />} />
                     <Route path='/admin/orders' element={<AdminOrders />} />
->>>>>>> Stashed changes
                     </Route>
                 </Routes> 
             </BrowserRouter>

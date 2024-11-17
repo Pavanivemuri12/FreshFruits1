@@ -4,7 +4,6 @@ import axios from 'axios'
 const API = 'http://localhost:3000'
 
 // ProductEndPonts
-<<<<<<< Updated upstream
 
 const addBasicFruits = (basicfruits) => axios.post(`${API}/basicfruits/add`,basicfruits)
 const addDryFruits = (dryfruits) => axios.post(`${API}/dryfruits/add`,dryfruits)
@@ -30,21 +29,15 @@ const editFruitBaskets = (exoticfruitbaskets,id)=>axios.put(`${API}/fruitbaskets
 
 
 const getBasicFruits = () => axios.get(`${API}/basicfruits/all`)
-=======
-const getBasicFruits = () => axios.get(`${API}/basicfruits/all`)
-const addBasicFruits = (basicfruits) => axios.post(`${API}/basicfruits/add`,basicfruits)
-const deleteBasicFruits = (id) => axios.delete(`${API}/basicfruits/delete/${id}`)
-const editBasicFruits = (basicfruits,id)=>axios.put(`${API}/basicfruits/edit/${id}`,basicfruits)
-const getOrders = () => axios.get(`${API}/orders/all`)
-const deleteOrders = (id) => axios.delete(`${API}/orders/delete/${id}`)
-const editOrders = (orders,id)=>axios.put(`${API}/orders/edit/${id}`,orders)
->>>>>>> Stashed changes
 const getDryFruits = () => axios.get(`${API}/dryfruits/all`)
 const getExoticFruits = () => axios.get(`${API}/exoticfruits/all`)
 const getOrganicFruits = () => axios.get(`${API}/organicfruits/all`)
 const getSeasonalFruits = () => axios.get(`${API}/seasonalfruits/all`)
 const getFruitBaskets = () => axios.get(`${API}/fruitbaskets/all`)
 const getNewlyAdded = () => axios.get(`${API}/newlyadded/all`)
+const editOrders = (orders,id)=>axios.put(`${API}/orders/edit/${id}`,orders)
+const getOrders = () => axios.get(`${API}/orders/all`)
+const deleteOrders = (id) => axios.delete(`${API}/orders/delete/${id}`)
 export{
     getBasicFruits,
     getDryFruits,
