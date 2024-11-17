@@ -20,8 +20,14 @@ const App = () => {
                     <Route element={<WebLayout />}>
                     <Route path='/' element={<Home />} />   
                     </Route>
+                    <Route element={<WebLayout />}>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/contact' element={<Contacts />} />
+                    <Route path='/location' element={<Location />} />
+                    <Route path='/about' element={<About/>} />
                     <Route element={<ProductLayout />}>
                     <Route path='/basicfruits' element={<BasicFruits />} />
+             
                     <Route path='/dryfruits' element={<DryFruits />} />
                     <Route path='/exoticfruits' element={<ExoticFruits />} />
                     <Route path='/organicfruits' element={<OrganicFruits />} />
@@ -31,6 +37,7 @@ const App = () => {
                     <Route path='/location' element={<Location />} />
                     <Route path='/about' element={<About/>} />     
                     </Route>
+                    </Route> 
                 </Routes> 
             </BrowserRouter>
         </>
