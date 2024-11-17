@@ -10,7 +10,7 @@ const About = () => {
       
       <div className="relative h-[400px] w-full">
   {/* Background Image */}
-  <img className="h-[100vh] w-[100vw] top-10 bottem-10 object-cover flex justify-center align-center " src="https://static.vecteezy.com/system/resources/thumbnails/037/944/263/small_2x/ai-generated-fresh-ripe-fruit-and-strawberry-water-drops-splash-photo.jpg" />
+  <img className="h-[85vh] w-full top-10 bottem-10 object-cover flex justify-center align-center " src="https://static.vecteezy.com/system/resources/thumbnails/037/944/263/small_2x/ai-generated-fresh-ripe-fruit-and-strawberry-water-drops-splash-photo.jpg" />
   {/* Overlay Text */}
   <div className="absolute inset-0  bg-opacity-50 flex items-center justify-center">
     <div className="text-center text-white">
@@ -20,6 +20,7 @@ const About = () => {
   </div>
 </div>
 <div>
+  <br></br>
   <br></br>
   <br></br>
   <br></br>
@@ -111,6 +112,11 @@ const About = () => {
 </div>
 <br>
 </br>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
 <div>
   <h1 className='font-sans-serif font-semibold text-green-500  text-center text-2xl '>Testimony</h1>
   <br>
