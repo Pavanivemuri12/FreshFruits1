@@ -30,14 +30,23 @@
 // export default Home
 import React from 'react'
 import HomeCarousel from '../components/HomeCarousel'
-
+import HomeCards from '../components/HomeCards'
 const Home = () => {
   return (
+    <>
+   
       <div className="flex flex-row justify-end items-start gap-8 w-screen h-full">
                <HomeCarousel />
-              
+               
                 
             </div>  
+            <br></br>
+            <br></br>
+           <div className='flex flex-row justify-end items-start gap-8 w-screen h-full'>
+            <HomeCards/>
+           </div>
+            
+             </>
   )
 }
 

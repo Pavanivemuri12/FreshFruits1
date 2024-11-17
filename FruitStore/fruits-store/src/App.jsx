@@ -3,7 +3,7 @@ import WebLayout from "./Layout/WebLayout";
 import ProductLayout from "./Layout/ProductLayout";
 import Home from "./pages/Home"
 import Location from "./pages/Location";
-import Contacts from "./pages/Contacts";
+import Contact from "./pages/Contact";
 import About from "./pages/About";
 import BasicFruits from "./pages/BasicFruits";
 import DryFruits from "./pages/DryFruits";
@@ -11,20 +11,18 @@ import ExoticFruits from "./pages/ExoticFruits";
 import OrganicFruits from "./pages/OrganicFruits";
 import SeasonalFruits from "./pages/SeasonalFruits";
 import FruitBaskets from "./pages/FruitBaskets";
+
 const App = () => {
     return (
         <>
  <BrowserRouter>
                 <Routes>
                     <Route element={<WebLayout />}>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/contact' element={<Contacts />} />
-                    <Route path='/location' element={<Location />} />
-                    <Route path='/about' element={<About/>} />     
+                    <Route path='/' element={<Home />} />   
                     </Route>
                     <Route element={<WebLayout />}>
                     <Route path='/' element={<Home />} />
-                    <Route path='/contact' element={<Contacts />} />
+                    <Route path='/contact' element={<Contact />} />
                     <Route path='/location' element={<Location />} />
                     <Route path='/about' element={<About/>} />
                     <Route element={<ProductLayout />}>
@@ -35,6 +33,9 @@ const App = () => {
                     <Route path='/organicfruits' element={<OrganicFruits />} />
                     <Route path='/seasonalfruits' element={<SeasonalFruits />} />
                     <Route path='/fruitbasket' element={<FruitBaskets />} />
+                    <Route path='/contact' element={<Contact />} />
+                    <Route path='/location' element={<Location />} />
+                    <Route path='/about' element={<About/>} />     
                     </Route>
                     </Route> 
                 </Routes> 
