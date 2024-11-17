@@ -4,6 +4,7 @@ import HomeCarousel from '../components/HomeCarousel'
 import HomeCards from '../components/HomeCards'
 import CountdownTimer from '../pages/CountDown'
 import NewlyAdded from '../pages/NewlyAdded'
+import Footer from '../pages/BookMark'
 const Home = () => {
   return (
     <>
@@ -45,6 +46,10 @@ const Home = () => {
           <div>
           <NewlyAdded/>
           </div>
+
+            </div>
+            <div>
+              <Footer/>
             </div>
           
         
