@@ -46,7 +46,7 @@ const App = () => {
                     <Route path='/exoticfruits' element={<ExoticFruits />} />
                     <Route path='/organicfruits' element={<OrganicFruits />} />
                     <Route path='/seasonalfruits' element={<SeasonalFruits />} />
-                    <Route path='/fruitbasket' element={<FruitBaskets />} />
+                    <Route path='/fruitbaskets' element={<FruitBaskets />} />
                     <Route path='/contact' element={<Contact />} />
                     <Route path='/location' element={<Location />} />
                     <Route path='/about' element={<About/>} />     
@@ -60,7 +60,7 @@ const App = () => {
                     <Route path='/admin/exoticfruits' element={<AdminExoticFruits />} />
                     <Route path='/admin/organicfruits' element={<AdminOrganicFruits />} />
                     <Route path='/admin/seasonalfruits' element={<AdminSeasonalFruits />} />
-                    <Route path='/admin/fruitbasket' element={<AdminFruitBaskets />} />
+                    <Route path='/admin/fruitbaskets' element={<AdminFruitBaskets />} />
                     <Route path='/admin/orders' element={<AdminOrders />} />
                     <Route path='/admin/users' element={<AdminUsers />} />
                     </Route>

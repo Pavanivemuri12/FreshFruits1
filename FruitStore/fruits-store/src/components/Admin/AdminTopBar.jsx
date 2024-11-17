@@ -40,8 +40,8 @@ const AdminTopBar = () => {
       path: "/admin/exoticfruits",
     },
     {
-      title: "FruitBasket",
-      path: "/admin/fruitbasket",
+      title: "FruitBaskets",
+      path: "/admin/fruitbaskets",
     },
     {
       title: "OrganicFruits",
