@@ -47,7 +47,7 @@ const Leftbar = () => {
             >
               <NavLink
                 to={link.path || '#'}
-                className="h-5 text-lg font-semibold text-white py-3 px-5 hover:text-white hover:bg-white transition duration-200"
+                className="h-5 text-lg font-semibold text-lime-500 py-3 px-5 hover:text-white hover:bg-lime-500 transition duration-200"
               >
                 {link.title}
               </NavLink>
