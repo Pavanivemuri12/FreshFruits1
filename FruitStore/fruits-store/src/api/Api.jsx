@@ -39,13 +39,7 @@ const getOrganicFruits = () => axios.get(`${API}/organicfruits/all`)
 const getSeasonalFruits = () => axios.get(`${API}/seasonalfruits/all`)
 const getFruitBaskets = () => axios.get(`${API}/fruitbaskets/all`)
 const getNewlyAdded = () => axios.get(`${API}/newlyadded/all`)
-
 const getUsers = () => axios.get(`${API}/users/all`)
-
-
-
-
-
 
 export{
     getBasicFruits,
@@ -85,7 +79,11 @@ export{
     editFruitBaskets,
     editUsers,
     resetPassword,
-
+    getNewlyAdded,
+    getUsers,
+    addUsers,
+    deleteUsers,
+    editUsers,
 
     getNewlyAdded
 }
