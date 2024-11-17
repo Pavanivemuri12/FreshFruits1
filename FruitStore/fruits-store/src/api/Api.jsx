@@ -51,7 +51,7 @@ export{
     getSeasonalFruits,
     getFruitBaskets,
     getOrders ,
-    getUsers,
+    
     deleteOrders,
     editOrders,
     addBasicFruits,
@@ -60,7 +60,7 @@ export{
     addOrganicFruits,
     addSeasonalFruits,
     addFruitBaskets,
-    addUsers,
+    
 
 
 
@@ -70,7 +70,7 @@ export{
     deleteOrganicFruits,
     deleteSeasonalFruits,
     deleteFruitBaskets,
-    deleteUsers,
+    
 
 
 
@@ -81,14 +81,13 @@ export{
     editOrganicFruits,
     editSeasonalFruits,
     editFruitBaskets,
-    editUsers,
     resetPassword,
     getNewlyAdded,
     getUsers,
     addUsers,
     deleteUsers,
-    editUsers,
+    editUsers
 
-    getNewlyAdded
+    
 }
 

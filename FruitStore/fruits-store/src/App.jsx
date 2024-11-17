@@ -14,7 +14,7 @@ import OrganicFruits from "./pages/OrganicFruits";
 import SeasonalFruits from "./pages/SeasonalFruits";
 import FruitBaskets from "./pages/FruitBaskets";
 import Admindashboard from "./pages/Admin/Admindashboard";
-import NewlyAdded from "./pages/NewlyAdded";
+
 
 import AdminBasicFruits from "./pages/Admin/AdminBasicFruits";
 import AdminDryFruits from "./pages/Admin/AdminDryFruits";
