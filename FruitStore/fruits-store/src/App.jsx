@@ -22,9 +22,8 @@ import AdminExoticFruits from "./pages/Admin/AdminExoticFruits";
 import AdminOrganicFruits from "./pages/Admin/AdminOrganicFruits";
 import AdminSeasonalFruits from "./pages/Admin/AdminSeasonalFruits";
 import AdminFruitBaskets from "./pages/Admin/AdminFruitBaskets";
+import AdminOrders from "./pages/Admin/AdminOrders"
 import AdminUsers from "./pages/Admin/AdminUsers";
-
-
 
 const App = () => {
     return (
@@ -59,9 +58,10 @@ const App = () => {
                     <Route path='/admin/basicfruits' element={<AdminBasicFruits />} />             
                     <Route path='/admin/dryfruits' element={<AdminDryFruits />} />
                     <Route path='/admin/exoticfruits' element={<AdminExoticFruits />} />
-                    <Route path='/admin/organicfruits' element={<OrganicFruits />} />
-                    <Route path='/admin/seasonalfruits' element={<SeasonalFruits />} />
-                    <Route path='/admin/fruitbasket' element={<FruitBaskets />} />
+                    <Route path='/admin/organicfruits' element={<AdminOrganicFruits />} />
+                    <Route path='/admin/seasonalfruits' element={<AdminSeasonalFruits />} />
+                    <Route path='/admin/fruitbasket' element={<AdminFruitBaskets />} />
+                    <Route path='/admin/orders' element={<AdminOrders />} />
                     <Route path='/admin/users' element={<AdminUsers />} />
                     </Route>
                 </Routes> 

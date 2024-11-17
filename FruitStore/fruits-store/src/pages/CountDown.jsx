@@ -9,7 +9,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     // Set the target time for the countdown
-    const targetDate = new Date().getTime() + 3600000; // 1 hour from now
+    const targetDate = new Date().getTime() + 3600000*12; // 1 hour from now
 
     const updateCountdown = () => {
       const now = new Date().getTime();

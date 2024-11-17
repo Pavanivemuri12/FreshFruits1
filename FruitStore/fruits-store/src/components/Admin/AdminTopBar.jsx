@@ -18,7 +18,7 @@ const AdminTopBar = () => {
     },
     {
       title: "Orders",
-      path: "/admin/about",
+      path: "/admin/orders",
     },
     {
       title: "Users",
