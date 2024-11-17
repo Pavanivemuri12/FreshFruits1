@@ -1,4 +1,8 @@
 import React from 'react'
+// import frshp from '../assets/images/frshp.jpg'
+// import quality from '../assets/images/quality.jpg'
+// import alwy from '../assets/images/alwy.jpg'
+// import support from '../assets/images/support.jpg'
 import { Gift, MessageSquareHeart, PiggyBank, ShoppingCart } from 'lucide-react'
 const HomeCards = () => {
     return (
@@ -8,30 +12,34 @@ const HomeCards = () => {
 
     <div className="w-full h-full flex flex-row gap-8 justify-center items-center">
         
-      <div className="card h-60 w-60 bg-white flex flex-col justify-center items-center hover:scale-200 hover:z-10">
-      <PiggyBank className='h-35 w-40 size-10 mr-3 text-black group-hover:text-white  duration-300 ' />
+      <div className="card h-60 w-60 bg-white flex flex-col justify-center items-center hover:scale-110 hover:z-10">
+      {/* <PiggyBank className='h-35 w-40 size-10 mr-3 text-black group-hover:text-white  duration-300 ' /> */}
+      <img className="h-[15vh] w-[10vw]  top-10 bottom-10 object-contain flex justify-center align-center " src="https://pngimg.com/d/free_shipping_PNG10.png" alt='Customer' />
       <br></br>
-        <p className="text-base font-bold">Hover Me</p>
-        <p className="text-sm">Lorem Ipsum</p>
+        <p className="text-base font-bold">FREE SHIPPING</p>
+        <p className="text-sm">ON ORDER OVER $100</p>
       
       </div>
       <div className="card h-60 w-60 bg-white flex flex-col justify-center items-center hover:scale-110 hover:z-10">
-      <ShoppingCart className='h-35 w-40 size-10 mr-3 text-black group-hover:text-white  duration-300 ' />
+      {/* <ShoppingCart className='h-35 w-40 size-10 mr-3 text-black group-hover:text-white  duration-300 ' /> */}
+      <img className="h-[15vh] w-[15vw] top-10 bottom-10 object-contain flex justify-center align-center " src="https://static.vecteezy.com/system/resources/previews/051/664/479/non_2x/premium-quality-guaranteed-black-logo-free-vector.jpg" alt='Customer' />
       <br></br>
-        <p className="text-base font-bold">Hover Me</p>
-        <p className="text-sm">Lorem Ipsum</p>
+        <p className="text-base font-bold">SUPERIOR QUALITY</p>
+        <p className="text-sm">QUALITY PRODUCTS</p>
       </div>
       <div className="card h-60 w-60 bg-white flex flex-col justify-center items-center hover:scale-110 hover:z-10">
-      <Gift className='h-35 w-40 size-10 mr-3 text-black group-hover:text-white  duration-300 ' />
+      <img className="h-[15vh] w-[15vw] top-10 bottom-10 object-contain flex justify-center align-center " src="https://images.vexels.com/content/126916/preview/100-percent-fresh-badge-svg-cfda6c.png" alt='Customer' /> 
+      {/* <Gift className='h-35 w-40 size-10 mr-3 text-black group-hover:text-white  duration-300 ' /> */}
       <br></br>
-        <p className="text-base font-bold">Hover Me</p>
-        <p className="text-sm">Lorem Ipsum</p>
+        <p className="text-base font-bold">ALWAYS FRESH</p>
+        <p className="text-sm">PRODUCT WELL PACKAGE</p>
       </div>
       <div className="card h-60 w-60 bg-white flex flex-col justify-center items-center hover:scale-110 hover:z-10">
-      <MessageSquareHeart className='h-35 w-40 size-10 mr-3 text-black group-hover:text-white  duration-300 ' />
+      <img className="h-[15vh] w-[15vw] top-10 bottom-10 object-contain flex justify-center align-center " src="https://t3.ftcdn.net/jpg/06/04/78/60/360_F_604786022_I9yXhkIkrtgkO0GNwCNNKfFQrbMPeVTd.jpg" alt='Customer' />
+      {/* <MessageSquareHeart className='h-35 w-40 size-10 mr-3 text-black group-hover:text-white  duration-300 ' /> */}
       <br></br>
-        <p className="text-base font-bold">Hover Me</p>
-        <p className="text-sm">Lorem Ipsum</p>
+        <p className="text-base font-bold">SUPPORT</p>
+        <p className="text-sm">24/7 SUPPORT</p>
       </div>
     </div>
 
