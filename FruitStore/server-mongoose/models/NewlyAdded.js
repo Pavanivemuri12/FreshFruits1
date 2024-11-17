@@ -11,7 +11,7 @@ const NewlyAddedSchema = new mongoose.Schema({
     },
     price: {
         type: Number,
-        required: true,
+        required: true
         // unique:true
     },
 })

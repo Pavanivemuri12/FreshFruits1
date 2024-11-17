@@ -14,6 +14,7 @@ import OrganicFruits from "./pages/OrganicFruits";
 import SeasonalFruits from "./pages/SeasonalFruits";
 import FruitBaskets from "./pages/FruitBaskets";
 import Admindashboard from "./pages/Admin/Admindashboard";
+import NewlyAdded from "./pages/NewlyAdded";
 
 
 
@@ -22,19 +23,18 @@ const App = () => {
         <>
  <BrowserRouter>
                 <Routes>
-                    <Route element={<WebLayout />}>
-                    <Route path='/' element={<Home />} />   
-                    </Route>
+                    {/* <Route element={<WebLayout />}>
+                    <Route path='/' element={<Home />} /> 
+                    </Route> */}
                     <Route element={<WebLayout />}>
                     <Route path='/' element={<Home />} />
+                    
                     <Route path='/contact' element={<Contact />} />
                     <Route path='/location' element={<Location />} />
                     <Route path='/about' element={<About/>} />
-
-
                     <Route element={<ProductLayout />}>
+                    
                     <Route path='/basicfruits' element={<BasicFruits />} />
-             
                     <Route path='/dryfruits' element={<DryFruits />} />
                     <Route path='/exoticfruits' element={<ExoticFruits />} />
                     <Route path='/organicfruits' element={<OrganicFruits />} />

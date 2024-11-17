@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const NewlyAdded = require('../models/NewlyAdded')
+const NewlyAdded = require('../models/NewlyAdded');
 //const validate = require('../config/auth')
 
 router.get('/count', async (req, res) => {
@@ -42,7 +42,7 @@ router.put('/edit/:id', async (req, res) => {
         const id = req.params.id
         const existingadded = await NewlyAdded.findOne({ _id: id })
         if (!existingadded) {
-            return res.status(404).json({ message: "Newly Added not found" })
+            return res.status(404).json({ message: "Newly Added Fruits not found" })
         }
         const updatedadded = await NewlyAdded.findByIdAndUpdate(id, req.body, { new: true })
         return res.status(200).json(updatedadded)
@@ -57,7 +57,7 @@ router.delete('/delete/:id', async (req, res) => {
         const id = req.params.id
         const existingadded = await NewlyAdded.findOne({ _id: id })
         if (!existingadded) {
-            res.status(404).json({ message: "Newly Added Fruits not found" })
+            res.status(404).json({ message:"Newly Added Fruits not found" })
         }
         await NewlyAdded.findByIdAndDelete(id)
         return res.status(200).json({ message: "Newly Added Fruit Deleted" })
