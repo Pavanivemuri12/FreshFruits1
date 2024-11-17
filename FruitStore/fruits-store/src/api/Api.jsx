@@ -5,7 +5,17 @@ const API = 'http://localhost:3000'
 
 // ProductEndPonts
 const getBasicFruits = () => axios.get(`${API}/basicfruits/all`)
+const getDryFruits = () => axios.get(`${API}/dryfruits/all`)
+const getExoticFruits = () => axios.get(`${API}/exoticfruits/all`)
+const getOrganicFruits = () => axios.get(`${API}/organicfruits/all`)
+const getSeasonalFruits = () => axios.get(`${API}/seasonalfruits/all`)
+const getFruitBaskets = () => axios.get(`${API}/fruitbaskets/all`)
 export{
-    getBasicFruits
+    getBasicFruits,
+    getDryFruits,
+    getExoticFruits,
+    getOrganicFruits,
+    getSeasonalFruits,
+    getFruitBaskets
 }
 

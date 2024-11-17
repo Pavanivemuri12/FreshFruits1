@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import ProductCard from '../components/ProductCard'
-import { getBasicFruits } from '../api/Api'
+import { getOrganicFruits } from '../api/Api'
 import { Loader, Loader2, TriangleAlert } from 'lucide-react'
 
-const BasicFruits = () => {
-    const [basicfruits, setBasicFruits] = useState(null)
+const OrganicFruits = () => {
+    const [organicfruits, setOrganicFruits] = useState(null)
     const [loading, setLoading] = useState(true)
     const [query, setQuery] = useState('')
     const [fitlerProduct, setFilterProduct] = useState([])
     async function fetchData() {
         try {
-            const res = await getBasicFruits()
+            const res = await getOrganicFruits()
             if (res.status === 200) {
-                setBasicFruits(res.data)
+                setOrganicFruits(res.data)
                 setFilterProduct(res.data)
             }
 
@@ -28,8 +28,8 @@ const BasicFruits = () => {
         const query = e.target.value.toLowerCase();
         setQuery(query)
 
-        if (basicfruits) {
-            const filtered = basicfruits.filter((product) =>
+        if (organicfruits) {
+            const filtered = organicfruits.filter((product) =>
                 product.title.toLowerCase().includes(query)
             );
             setFilterProduct(filtered)
@@ -84,7 +84,7 @@ const BasicFruits = () => {
                         <div className='w-full h-full flex flex-col justify-center items-center'>
                             <TriangleAlert className='text-orange-400 h-12 w-12' />
                             <p>
-                                No Basic Fruits Available !
+                                No Organic Fruits Available !
                             </p>
                         </div>
                     ) : (
@@ -103,4 +103,4 @@ const BasicFruits = () => {
     )
 }
 
-export default BasicFruits
+export default OrganicFruits

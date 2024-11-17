@@ -6,8 +6,11 @@ import Location from "./pages/Location";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
 import BasicFruits from "./pages/BasicFruits";
-
-
+import DryFruits from "./pages/DryFruits";
+import ExoticFruits from "./pages/ExoticFruits";
+import OrganicFruits from "./pages/OrganicFruits";
+import SeasonalFruits from "./pages/SeasonalFruits";
+import FruitBaskets from "./pages/FruitBaskets";
 const App = () => {
     return (
         <>
@@ -27,6 +30,11 @@ const App = () => {
                     <Route element={<ProductLayout />}>
                     <Route path='/basicfruits' element={<BasicFruits />} />
                     </Route>     
+                    <Route path='/dryfruits' element={<DryFruits />} />
+                    <Route path='/exoticfruits' element={<ExoticFruits />} />
+                    <Route path='/organicfruits' element={<OrganicFruits />} />
+                    <Route path='/seasonalfruits' element={<SeasonalFruits />} />
+                    <Route path='/fruitbasket' element={<FruitBaskets />} />
                     </Route>
                    
                 </Routes> 
