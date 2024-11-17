@@ -6,10 +6,10 @@ const HomeCarousel = () => {
   return (
     <>
 
-      <Carousel   showThumbs={false} showStatus={false}>
-        <div>
+      <Carousel   showThumbs={false}   showStatus={false}>
+        <div className="relative object-cover h-[50vh]">
            
-          <img className="h-[98vh] w-[50vw] top-10 bottem-10 object-cover flex justify-center align-center " src="https://image3.jdomni.in/banner/03052022/91/49/0A/4E3668C9F39FBA5C082152C735_1651572466566.png?output-format=webp" />
+          <img className=" w-[50vw]  object-cover flex justify-center align-center " src="https://image3.jdomni.in/banner/03052022/91/49/0A/4E3668C9F39FBA5C082152C735_1651572466566.png?output-format=webp" />
           {/* <p className="legend">Mobiles</p> */}
 
           {/* <div className="absolute left-5 bottom-2 flex flex-col bg-white rounded-md"> 
@@ -33,7 +33,7 @@ const HomeCarousel = () => {
           </div> */}
         </div>
         <div>
-          <img className="h-[50vh] object-cover" src="https://cdn.thewirecutter.com/wp-content/media/2024/07/laptopstopicpage-2048px-3685-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp" />
+          <img className="h-[98vh] object-cover absolute bottom-0" src="https://eatanytime.in/cdn/shop/articles/close-up-healthy-nuts-wooden-background-generative-ai.jpg?v=1702453505&width=1100" />
           {/* <p className="legend">Laptops</p> */}
           {/* <div className="absolute left-2 bottom-2 flex flex-col bg-white rounded-md">
             <div className="px-6 py-8 sm:p-10 sm:pb-6">
@@ -56,7 +56,7 @@ const HomeCarousel = () => {
           </div> */}
         </div>
         <div>
-          <img className="h-[50vh] object-cover" src="https://www.jagranimages.com/images/newimg/14022024/14_02_2024-best_samsung_smart_watch_price_23653211.jpg" />
+          <img className="h-[98vh] object-cover" src="https://i.pinimg.com/736x/94/cf/b4/94cfb45349111297e8871c217305f66c.jpg" />
           {/* <p className="legend">TV</p> */}
           {/* <div className="absolute left-2 bottom-2 flex flex-col bg-white rounded-md">
             <div className="px-6 py-8 sm:p-10 sm:pb-6">

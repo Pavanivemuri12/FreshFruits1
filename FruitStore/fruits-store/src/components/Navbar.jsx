@@ -23,7 +23,7 @@ const Navbar = () => {
     ]
     return (
         <>
-            <div className='w-screen h-14 shadow-lime-300  bg-lime-600 shadow-md flex flex-row justify-center items-center'>
+            <div className='w-full h-14 shadow-lime-300  bg-lime-500 shadow-md flex flex-row justify-center items-center'>
                 <div className='w-[40%] flex justify-start items-center font-bold text-2xl text-white'>
                    Fresh Fruits
                 </div>
@@ -97,3 +97,5 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
