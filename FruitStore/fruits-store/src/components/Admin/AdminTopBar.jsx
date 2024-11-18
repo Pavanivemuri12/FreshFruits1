@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink ,useNavigate} from "react-router-dom";
 import { User, X } from "lucide-react";
 import { useState } from "react";
 
@@ -6,6 +6,12 @@ const AdminTopBar = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const Navigate = useNavigate()
+ 
+  
+
+ 
+
   const Linksdata = [
     {
       title: "Dashboard",
@@ -134,8 +140,10 @@ const AdminTopBar = () => {
       setShowRegister(false);
     }
   };
+
   return (
     <>
+   
       <div className="w-full h-14 shadow-lime-300  bg-lime-500 shadow-md flex flex-row justify-center items-center">
         <div className="w-[40%] flex justify-start items-center font-bold text-2xl text-white">
           Fresh Fruits
@@ -321,6 +329,7 @@ const AdminTopBar = () => {
       )}
     </>
   );
+  
 };
 
 export default AdminTopBar;

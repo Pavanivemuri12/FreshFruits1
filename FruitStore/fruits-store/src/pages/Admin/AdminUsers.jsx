@@ -159,6 +159,7 @@ if (!users || users.length === 0) {
             <th className='p-6'>Name</th>
             <th className='p-6'>Email</th>
             <th className='p-6'>Phone</th>
+            <th className='p-6'>Role</th>
            
           </tr>
         </thead>
@@ -171,6 +172,7 @@ if (!users || users.length === 0) {
                 <td className='p-6'>{user.name}</td>
                 <td className='p-6'>{user.email}</td>
                 <td className='p-6'>{user.phone}</td>
+                <td className='p-6'>{user.role}</td>
         
                 <td className='p-6 flex h-full w-full flex-row justify-start items-center gap-4'>
                    <button className='h-15 w-15 border-blue-500 border-2 p-1 rounded-md text-blue-500 shadow-md

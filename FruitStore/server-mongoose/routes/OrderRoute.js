@@ -2,8 +2,10 @@ const express = require('express')
 const router = express.Router();
 const Orders = require('../models/OrdersModel')
 // const validate = require('../config/auth')
+const { validateToken, validateTokenAdmin } = require('../config/auth')
 
-router.get('/count', async (req, res) => {
+
+router.get('/count',validateTokenAdmin, async (req, res) => {
     try {
         const count = await Orders.countDocuments()
         return res.status(200).json({ count: count })
@@ -12,7 +14,7 @@ router.get('/count', async (req, res) => {
     }
 })
 
-router.get('/all', async (req, res) => {
+router.get('/all',validateTokenAdmin, async (req, res) => {
     try {
         const orders = await Orders.find()
         res.status(200).json(orders)
@@ -21,7 +23,7 @@ router.get('/all', async (req, res) => {
     }
 })
 
-router.post('/add', async (req, res) => {
+router.post('/add',validateToken, async (req, res) => {
     try {
         const neworder = new Orders(req.body)
         const { uid, pid, phone, address, total,orderedAt} = neworder
@@ -36,7 +38,7 @@ router.post('/add', async (req, res) => {
     }
 })
 
-router.put('/edit/:id', async (req, res) => {
+router.put('/edit/:id',validateTokenAdmin, async (req, res) => {
     try {
         const id = req.params.id
         const existingorder = await Orders.findOne({ _id: id })
@@ -50,7 +52,7 @@ router.put('/edit/:id', async (req, res) => {
     }
 })
 
-router.delete('/delete/:id', async (req, res) => {
+router.delete('/delete/:id',validateTokenAdmin, async (req, res) => {
     try {
         const id = req.params.id
         const existingorder = await Orders.findOne({ _id: id })

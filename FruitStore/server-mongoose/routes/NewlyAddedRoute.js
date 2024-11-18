@@ -1,9 +1,11 @@
 const express = require('express')
 const router = express.Router();
 const NewlyAdded = require('../models/NewlyAdded');
+//const { validate } = require('../models/UsersModel');
 //const validate = require('../config/auth')
+const { validateTokenAdmin } = require('../config/auth')
 
-router.get('/count', async (req, res) => {
+router.get('/count',validateTokenAdmin, async (req, res) => {
     try {
         const count = await NewlyAdded.countDocuments()
         return res.status(200).json({ count: count })
@@ -22,7 +24,7 @@ router.get('/all', async (req, res) => {
 })
 
 // Method : POST  || API : localhost:3000/products/add
-router.post('/add', async (req, res) => {
+router.post('/add',validateTokenAdmin, async (req, res) => {
     try {
         const newadded = new NewlyAdded(req.body)
         const { title, img, price } = newadded
@@ -37,7 +39,7 @@ router.post('/add', async (req, res) => {
 })
 
 // Method : PUT  || API : localhost:3000/products/edit/_id
-router.put('/edit/:id', async (req, res) => {
+router.put('/edit/:id',validateTokenAdmin, async (req, res) => {
     try {
         const id = req.params.id
         const existingadded = await NewlyAdded.findOne({ _id: id })
@@ -52,7 +54,7 @@ router.put('/edit/:id', async (req, res) => {
 })
 
 // Method : DELETE  || API : localhost:3000/products/delete/_id
-router.delete('/delete/:id', async (req, res) => {
+router.delete('/delete/:id',validateTokenAdmin, async (req, res) => {
     try {
         const id = req.params.id
         const existingadded = await NewlyAdded.findOne({ _id: id })
