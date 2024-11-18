@@ -8,8 +8,7 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-semibold mb-4">Fresh Fruits</h2>
           <p className="text-gray-600 text-sm">
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia.
+            Far far away,<br></br> behind the word mountains<br/>from the countries.
           </p>
           <div className="flex space-x-4 mt-4">
             <a href="#" className="text-gray-600 hover:text-gray-900">
