@@ -141,7 +141,7 @@ const AdminOrganicFruits = () => {
                 <img
                   src={product.img}
                   alt={product.title}
-                  className="h-12 w-12 object-cover rounded-full shadow-md bg-purple-500"
+                  className="h-12 w-12 object-cover rounded-full shadow-md bg-lime-500"
                 />
               </td>
 

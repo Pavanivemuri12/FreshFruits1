@@ -12,7 +12,7 @@ const Navbar = () => {
             path: '/'
         },
         {
-            title: 'Location',
+            title: 'Place-Order',
             path: '/location'
         },
         {
@@ -115,7 +115,7 @@ const Navbar = () => {
                 <div className='w-[50%] h-full flex justify-end items-center '>
                     <div className='w-full h-full flex flex-row justify-end items-center gap-8 font-bold'>
                         {Linksdata.map((link, index) => (
-                            <NavLink to={link.path} key={index} className='h-[65%] w-20 hover:bg-white hover:text-lime-600 text-white flex justify-center items-center rounded-sm'>
+                            <NavLink to={link.path} key={index} className='h-[65%] w-30 hover:bg-white hover:text-lime-600 text-white flex justify-center items-center rounded-sm'>
                                 {link.title}
                             </NavLink>
                         ))
