@@ -3,6 +3,7 @@ import { User,X } from 'lucide-react'
 import {useRef,useState } from "react"
 import { Login, Register } from "../api/Api"
 import { toast } from "sonner"
+import round from "../assets/images/round.jpg"
 import { getRole, storeToken } from "../service/auth"
 
 const Navbar = () => {
@@ -31,7 +32,7 @@ const navigate = useNavigate()
             title: 'Contact',
             path: '/contact'
         }
-    ]
+        ]
     const handleLogin = async (e) => {
         e.preventDefault()
         const credentials = {
@@ -114,9 +115,14 @@ const navigate = useNavigate()
             setShowRegister(false)
         }
     }
+    const handleLogout = () => {
+        localStorage.removeItem('token')
+        Navigate('/')
+      }
     return (
         <>
-            <div className='w-full h-14 shadow-lime-300  bg-lime-500 shadow-md flex flex-row justify-center items-center'>
+            <div className='w-full h-14 shadow-lime-300 gap-2 bg-lime-500 shadow-md flex flex-row justify-center items-center'>
+            <img className="h-[7vh] w-[45px] top-10 bottom-10 border-radius-360 rounded-full flex justify-center align-center  " src={round} alt='logo' />
                 <div className='w-[40%] flex justify-start items-center font-bold text-2xl text-white'>
                     Fresh Fruits
                 </div>
@@ -188,7 +194,6 @@ const navigate = useNavigate()
                 </div>
             )
             }
-
 
         </>
     )
