@@ -1,7 +1,7 @@
 import { IndianRupee } from 'lucide-react'
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import Location from '../pages/Location'import { useNavigate } from "react-router-dom";
+//import Location from '../pages/Location'
 //import Location from '../pages/Location'
 const ProductCard = ({ img, price, name }) => {
     const navigate=useNavigate();
