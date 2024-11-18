@@ -170,7 +170,7 @@ const AdminBasicFruits = () => {
        {showAdd && (
         <>
           <div className="absolute top-0 left-0 z-50 h-screen w-screen flex justify-center items-center bg-black/40 ">
-            <div className="h-[55%] w-1/3 flex flex-col justify-center items-center bg-white shadow-2xl rounded-md">
+            <div className="h-[65%] w-1/3 flex flex-col justify-center items-center bg-white shadow-2xl rounded-md">
               <div className="h-full w-full flex flex-col justify-center items-center text-lg font-semibold">
                 <div className="h-[20%] w-[80%] flex flex-row justify-center items-center">
                   <h1 className="w-1/2 text-left text-xl my-6 font-bold text-green-500">
@@ -186,7 +186,7 @@ const AdminBasicFruits = () => {
                   </div>
                 </div>
                 <form
-                  className="h-[70%] w-[80%] flex flex-col justify-center items-center gap-8"
+                  className="h-[90%] w-[80%] flex flex-col justify-center items-center gap-6"
                   onSubmit={handleAdd}
                 >
                   <input
@@ -195,7 +195,7 @@ const AdminBasicFruits = () => {
                     title=""
                     id="title"
                     placeholder="Title"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                     required
                   />
                   <input
@@ -204,7 +204,7 @@ const AdminBasicFruits = () => {
                     name=""
                     id="img"
                     placeholder="Image URL"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                     required
                   />
                   <input
@@ -213,7 +213,7 @@ const AdminBasicFruits = () => {
                     name=""
                     id="price"
                     placeholder="Price"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
                     required
                   />
                   <button

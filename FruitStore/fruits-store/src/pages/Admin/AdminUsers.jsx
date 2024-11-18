@@ -227,7 +227,7 @@ if (!users || users.length === 0) {
                     name=""
                     id="name"
                     placeholder="Name"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                     required
                   />
                   <input
@@ -236,7 +236,7 @@ if (!users || users.length === 0) {
                     name=""
                     id="email"
                     placeholder="Email"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                     required
                   />
                   <input
@@ -245,7 +245,7 @@ if (!users || users.length === 0) {
                     name=""
                     id="phoneNumber"
                     placeholder="PhoneNumber"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                     required
                   />
                    <input
@@ -254,11 +254,11 @@ if (!users || users.length === 0) {
                     name=""
                     id="password"
                     placeholder="Password"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                     required
                   />
                     <div className="select my-2"></div>
-                    <div className="select w-[50] shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm">
+                    <div className="select w-[50] shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm">
                     <select name="format" id="format" defaultValue='ADMIN' ref={roleRef}>
                       <option value="ADMIN">Admin</option>
                       <option value="USER">User</option>
