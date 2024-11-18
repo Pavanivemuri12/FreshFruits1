@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { User, X, LogOut } from "lucide-react";
 import { useState } from "react";
+import round from "../../assets/images/round.jpg"
 
 const AdminTopBar = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -42,7 +43,7 @@ const AdminTopBar = () => {
   return (
     <>
       <div className="w-full h-14 shadow-lime-300 bg-lime-500 shadow-md flex items-center">
-        {/* Left Section */}
+        {/* Left Section */}<img className="h-[7vh] w-[45px] top-10 bottom-10 border-radius-360 rounded-full flex justify-center align-center  " src={round} alt='logo' />
         <div className="flex-1 font-bold text-2xl text-white pl-4">
           Fresh Fruits
         </div>
@@ -60,8 +61,7 @@ const AdminTopBar = () => {
               >
                 <NavLink
                   to={link.path || "#"}
-                  className="h-5 text-lg font-semibold text-white py-3 px-5 hover:text-black hover:bg-lime-500 transition duration-200"
-                >
+                  className="h-5 text-lg font-semibold text-white py-3 px-5 hover:text-black hover:bg-lime-500 transition duration-200">
                   {link.title}
                 </NavLink>
 

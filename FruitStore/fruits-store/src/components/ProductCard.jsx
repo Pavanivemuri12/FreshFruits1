@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { IndianRupee } from 'lucide-react';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -27,6 +28,13 @@ const ProductCard = ({ img, price, name, rating = 4 }) => {
             </svg>
         ));
     };
+=======
+import { IndianRupee } from 'lucide-react'
+import React from 'react'
+import { useNavigate } from "react-router-dom";
+//import Location from '../pages/Location'
+const ProductCard = ({ img, price, name }) => {
+>>>>>>> Stashed changes
     const navigate=useNavigate();
 
     const handleRedirect=()=>{
