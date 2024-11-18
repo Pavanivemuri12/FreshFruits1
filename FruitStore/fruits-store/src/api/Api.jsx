@@ -1,12 +1,13 @@
 import axios from 'axios'
 import { getToken } from '../service/auth'
 
+
 const API = 'http://localhost:3000'
+
 
 const axiosInstance = axios.create({
     baseURL: API,
 })
-
 
 axiosInstance.interceptors.request.use(
     (config) => {
@@ -20,25 +21,8 @@ axiosInstance.interceptors.request.use(
         return Promise.reject(error)
     }
 )
-
-
-
-
-
-
-
 // ProductEndPonts
 
-<<<<<<< Updated upstream
-const addBasicFruits = (basicfruits) => axios.post(`${API}/basicfruits/add`,basicfruits)
-const addDryFruits = (dryfruits) => axios.post(`${API}/dryfruits/add`,dryfruits)
-const addExoticFruits = (exoticfruits) => axios.post(`${API}/exoticfruits/add`,exoticfruits)
-const addOrganicFruits = (organicfruits) => axios.post(`${API}/organicfruits/add`,organicfruits)
-const addSeasonalFruits = (seasonalfruits) => axios.post(`${API}/seasonalfruits/add`,seasonalfruits)
-const addFruitBaskets = (fruitbaskets) => axios.post(`${API}/fruitbaskets/add`,fruitbaskets)
-const addUsers = (users) => axios.post(`${API}/users/add`,users)
-const addOrder = (orders) => axios.post(`${API}/users/add`,orders)
-=======
 const addBasicFruits = (basicfruits) => axiosInstance.post(`${API}/basicfruits/add`,basicfruits)
 const addDryFruits = (dryfruits) => axiosInstance.post(`${API}/dryfruits/add`,dryfruits)
 const addExoticFruits = (exoticfruits) => axiosInstance.post(`${API}/exoticfruits/add`,exoticfruits)
@@ -47,7 +31,6 @@ const addSeasonalFruits = (seasonalfruits) => axiosInstance.post(`${API}/seasona
 const addFruitBaskets = (fruitbaskets) => axiosInstance.post(`${API}/fruitbaskets/add`,fruitbaskets)
 const addUsers = (users) => axiosInstance.post(`${API}/users/add`,users)
 
->>>>>>> Stashed changes
 
 const deleteBasicFruits = (id) => axiosInstance.delete(`${API}/basicfruits/delete/${id}`)
 const deleteDryFruits = (id) => axiosInstance.delete(`${API}/dryfruits/delete/${id}`)
@@ -64,7 +47,7 @@ const editOrganicFruits = (organicfruits,id)=>axiosInstance.put(`${API}/organicf
 const editSeasonalFruits = (seasonalfruits,id)=>axiosInstance.put(`${API}/seasonalfruits/edit/${id}`,seasonalfruits)
 const editFruitBaskets = (fruitbaskets,id)=>axiosInstance.put(`${API}/fruitbaskets/edit/${id}`,fruitbaskets)
 const editUsers = (users,id)=>axiosInstance.put(`${API}/users/edit/${id}`,users)
-const resetPassword = (password,id)=>axios.put(`${API}/users/resetpassword/${id}`,password)
+const resetPassword = (password,id)=>axiosInstance.put(`${API}/users/resetpassword/${id}`,password)
 
 
 const getBasicFruits = () => axios.get(`${API}/basicfruits/all`)
@@ -78,11 +61,8 @@ const editOrders = (orders,id)=>axiosInstance.put(`${API}/orders/edit/${id}`,ord
 const getOrders = () => axiosInstance.get(`${API}/orders/all`)
 const deleteOrders = (id) => axiosInstance.delete(`${API}/orders/delete/${id}`)
 const getUsers = () => axiosInstance.get(`${API}/users/all`)
-
-
 const Login = (credentials) => axios.post(`${API}/auth/login`, credentials)
 const Register = (credentials) => axios.post(`${API}/auth/register`, credentials)
-
 export{
     getBasicFruits,
     getDryFruits,
@@ -91,7 +71,7 @@ export{
     getSeasonalFruits,
     getFruitBaskets,
     getOrders ,
-    addOrder,
+    
     deleteOrders,
     editOrders,
     addBasicFruits,
@@ -127,10 +107,8 @@ export{
     addUsers,
     deleteUsers,
     editUsers,
-
     Login,
     Register
 
     
 }
-
