@@ -87,7 +87,7 @@ const AdminTopBar = () => {
 
           {/* User Icon */}
           <button
-            className="h-9 w-9 flex justify-center items-center border-2 rounded-full hover:bg-white hover:border-lime-600 hover:text-lime-600 shadow-md"
+            className="h-9 w-9 flex justify-center items-center border-2 rounded-full hover:bg-lime-300 hover:border-lime-600 hover:text-lime-600 shadow-md"
             onClick={() => setShowLogin(!showLogin)}
           >
             <User className="h-6 w-6 text-white" />
