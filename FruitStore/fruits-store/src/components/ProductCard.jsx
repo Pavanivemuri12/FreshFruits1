@@ -36,7 +36,7 @@ const ProductCard = ({ img, price, name, rating = 4 }) => {
     return (
         <div className="relative flex w-[24%] p-4 mt-1 flex-col rounded-xl bg-lime-100 text-gray-700 shadow-md">
             {/* Product Image */}
-            <div className="relative mx-4 -mt-0 h-32 overflow-hidden rounded-xl bg-gradient-to-r from-purple-300 to-purple-600">
+            <div className="relative mx-4 -mt-0 h-32 overflow-hidden rounded-xl bg-gradient-to-r from-lime-300 to-lime-500">
                 <img src={img} alt={name} className="h-full w-full object-cover" />
             </div>
 

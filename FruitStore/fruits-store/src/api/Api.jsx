@@ -3,6 +3,7 @@ import { getToken } from '../service/auth'
 
 
 const API = 'http://localhost:3000'
+//const API = 'https://fresh-fruits-server.onrender.com'
 
 
 const axiosInstance = axios.create({

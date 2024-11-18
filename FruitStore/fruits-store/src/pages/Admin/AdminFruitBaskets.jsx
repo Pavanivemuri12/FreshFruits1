@@ -93,7 +93,7 @@ const AdminFruitBaskets = () => {
     return (
       <>
         <div className="w-screen h-[90vh] flex flex-col justify-center items-center">
-          <Loader2 className="text-purple-500 h-14 w-14 animate-spin" />
+          <Loader2 className="text-lime-500 h-14 w-14 animate-spin" />
         </div>
       </>
     );
@@ -213,7 +213,7 @@ const AdminFruitBaskets = () => {
                     name=""
                     id="price"
                     placeholder="Price"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                     required
                   />
                   <button
