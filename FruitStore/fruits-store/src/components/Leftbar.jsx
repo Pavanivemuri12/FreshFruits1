@@ -39,7 +39,7 @@ const Leftbar = () => {
   };
 
   return (
-    <div className="z-10 h-9 w-full bg-white shadow-md flex flex-row justify-start items-center">
+    <div className="z-10 h-9 w-screen bg-white shadow-md flex flex-row justify-start items-center">
       <div className="relative flex items-start justify-start space-x-8">
         {Linksdata.map((link, index) => (
           <div

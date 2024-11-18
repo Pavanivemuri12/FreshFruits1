@@ -248,9 +248,9 @@ const AdminOrders = () => {
                   </button>
                 </div>
                 <form
-                  className="w-[80%] flex flex-col justify-center items-center gap-5 mt-4"
-                  onSubmit={handleEdit}
-                >
+                  className="w-[80%] h-[90%] flex flex-col justify-center items-center gap-5 mt-4"
+                  onSubmit={handleEdit}>
+                
                   <input
                     ref={uidRef}
                     type="number"
@@ -302,8 +302,9 @@ const AdminOrders = () => {
                   />
                   <button
                     type="submit"
-                    className="w-full h-[2rem] shadow-lg shadow-gray-400 hover:shadow-blue-400 bg-blue-500 text-white rounded-sm outline-none"
+                    className="w-full h-[2rem]  shadow-lg shadow-gray-400 hover:shadow-blue-400 bg-blue-500 text-white rounded-sm outline-none"
                   >
+                    
                     Save
                   </button>
                 </form>

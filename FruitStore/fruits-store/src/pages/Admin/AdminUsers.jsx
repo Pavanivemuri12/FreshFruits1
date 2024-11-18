@@ -154,12 +154,13 @@ if (!users || users.length === 0) {
         </button>
         </div>
       <table className='w-full h-full border-collapse border shadow-lg rounded-md'>
-        <thead className='shadow-sm font-bold text-purple-500 text-left'>
+        <thead className='shadow-sm font-bold text-lime-500 text-left'>
           <tr>
             <th className='p-6'>Name</th>
             <th className='p-6'>Email</th>
             <th className='p-6'>Phone</th>
             <th className='p-6'>Role</th>
+            <th className='p-6'>Actions</th>
            
           </tr>
         </thead>
@@ -200,7 +201,7 @@ if (!users || users.length === 0) {
           </table> 
           {showAdd && (
         <>
-          <div className="absolute top-0 left-0 z-50 h-screen w-screen flex justify-center items-center bg-black/40 ">
+          <div className="absolute top-0 left-0 z-50 h-[100%] w-screen flex justify-center items-center bg-black/40 ">
             <div className="h-[90%] w-1/3 flex flex-col justify-center items-center bg-white shadow-2xl rounded-md">
               <div className="h-full w-full flex flex-col justify-center items-center text-lg font-semibold">
                 <div className="h-[20%] w-[80%] flex flex-row justify-center items-center">
@@ -217,7 +218,7 @@ if (!users || users.length === 0) {
                   </div>
                 </div>
                 <form
-                  className="h-[70%] w-[80%] flex flex-col justify-center items-center gap-8"
+                  className="h-[90%] w-[80%] flex flex-col justify-center items-center gap-4"
                   onSubmit={handleAdd}
                 >
                   <input
@@ -226,7 +227,7 @@ if (!users || users.length === 0) {
                     name=""
                     id="name"
                     placeholder="Name"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
                     required
                   />
                   <input
@@ -235,7 +236,7 @@ if (!users || users.length === 0) {
                     name=""
                     id="email"
                     placeholder="Email"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
                     required
                   />
                   <input
@@ -244,7 +245,7 @@ if (!users || users.length === 0) {
                     name=""
                     id="phoneNumber"
                     placeholder="PhoneNumber"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
                     required
                   />
                    <input
@@ -253,11 +254,11 @@ if (!users || users.length === 0) {
                     name=""
                     id="password"
                     placeholder="Password"
-                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
+                    className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm"
                     required
                   />
                     <div className="select my-2"></div>
-                    <div className="select w-[50] shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm">
+                    <div className="select w-[50] shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-purple-400 rounded-sm">
                     <select name="format" id="format" defaultValue='ADMIN' ref={roleRef}>
                       <option value="ADMIN">Admin</option>
                       <option value="USER">User</option>
@@ -287,10 +288,10 @@ if (!users || users.length === 0) {
                     <X className="h-8 w-8 border-2 p-1  border-red-500 rounded-full  hover:bg-red-500 hover:text-white" />
                   </div>
                 </div>
-                <form className='h-[90%] w-[80%] flex flex-col justify-center items-center gap-8' onSubmit={handleEdit}>
-                  <input ref={nameRef} type="String" name="" id="name" placeholder='Name' defaultValue={currentUser.name} className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-blue-400 rounded-sm' required autoFocus />
-                  <input ref={emailRef} type="String" name="" id="email" placeholder='email' defaultValue={currentUser.email} className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-blue-400 rounded-sm' required />
-                  <input ref={phoneRef} type="number" name="" id="phoneId" placeholder='Phone' defaultValue={currentUser.phone} className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-4 focus:shadow-lg focus:border-b-2 focus:border-blue-400 rounded-sm' required />  
+                <form className='h-[90%] w-[80%] flex flex-col justify-center items-center gap-6' onSubmit={handleEdit}>
+                  <input ref={nameRef} type="String" name="" id="name" placeholder='Name' defaultValue={currentUser.name} className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-blue-400 rounded-sm' required autoFocus />
+                  <input ref={emailRef} type="String" name="" id="email" placeholder='email' defaultValue={currentUser.email} className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-blue-400 rounded-sm' required />
+                  <input ref={phoneRef} type="number" name="" id="phoneId" placeholder='Phone' defaultValue={currentUser.phone} className='w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-blue-400 rounded-sm' required />  
                   <div className="select my-2">
                     <select name="format" id="format" defaultValue='ADMIN' ref={roleRef}>
                       <option value="ADMIN">Admin</option>

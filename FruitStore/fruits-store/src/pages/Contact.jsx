@@ -18,7 +18,7 @@ const Contact = () => {
         <div className="w-full top-5 h-35 flex justify-center items-center text-3xl text-green-500 font-semibold">
           Contact Us
         </div>
-        <div className="w-[75%] h-[25rem] shadow-lg flex flex-row justify-center items-center">
+        <div className="w-[75%] h-[35rem] shadow-lg flex flex-row justify-center items-center">
           <div className="h-[90%] w-1/2 flex flex-col justify-center items-center gap-4">
             <div className="h-[31%] w-[70%] border rounded-md flex flex-col justify-center items-center text-lg font-semibold gap-4 shadow-md">
               <Mail className="h-8 w-8 text-green-600" />
@@ -43,26 +43,26 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
+                  className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-1 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                 />
                 <input
                   type="email"
                   placeholder="Email"
-                  className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
+                  className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-1 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                 />
                 <input
                   type="tel"
                   placeholder="Phone"
-                  className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
+                  className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-1 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                 />
                 <textarea
                   placeholder="Message"
-                  className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-2 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
+                  className="w-full shadow-sm outline-none bg-[#f5f5f7] border-b-2 border-transparent p-1 focus:shadow-lg focus:border-b-2 focus:border-lime-400 rounded-sm"
                   rows="4"
                 />
                 <button
                   type="submit"
-                  className="w-full h-[3rem] shadow-lg shadow-gray-400 hover:shadow-lime-600 bg-lime-600 text-white rounded-sm outline-none"
+                  className="w-full h-[3rem] shadow-lg shadow-gray-400 hover:shadow-lime-600 bg-lime-600 p-1 text-white rounded-sm outline-none"
                 >
                   Send Message
                 </button>

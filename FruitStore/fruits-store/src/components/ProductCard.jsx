@@ -1,49 +1,103 @@
-import { IndianRupee } from 'lucide-react'
-import React from 'react'
-import { useNavigate } from "react-router-dom";
-//import Location from '../pages/Location'
-//import Location from '../pages/Location'
-const ProductCard = ({ img, price, name }) => {
+import { IndianRupee } from 'lucide-react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const ProductCard = ({ img, price, name, rating = 4 }) => {
+    const [quantity, setQuantity] = useState(1);
+    const [showPopup, setShowPopup] = useState(false);
+
+    const increment = () => setQuantity((prev) => prev + 1);
+    const decrement = () => setQuantity((prev) => (prev > 1 ? prev - 1 : prev));
+    const handleAddToCart = () => {
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 3000);
+    };
+
+    const renderStars = () => {
+        const totalStars = 5;
+        return Array.from({ length: totalStars }, (_, i) => (
+            <svg
+                key={i}
+                xmlns="http://www.w3.org/2000/svg"
+                fill={i < rating ? "#fc0" : "#e9e9e9"}
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+            >
+                <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.4 8.162L12 18.896l-7.334 3.864 1.4-8.162L.132 9.21l8.2-1.192L12 .587z" />
+            </svg>
+        ));
+    };
     const navigate=useNavigate();
+
     const handleRedirect=()=>{
-      navigate("/location")
+        navigate("/location")
     }
+
     return (
-        <>
-
-            <div className="relative flex w-[24%] p-6 mt-1 flex-col rounded-xl bg-lime-100 bg-clip-border text-gray-700 shadow-md ">
-                <div className="relative mx-4 -mt-0 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-purple-300 to-purple-600">
-                    <img src={img} alt={name} className='h-full w-full object-cover ' />
-                </div>
-                <div className="p-6">
-                    <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                        {name}
-                    </h5>
-                    <p className=" font-sans  leading-relaxed text-inherit antialiased font-bold flex flex-row text-xl items-center">
-                        <IndianRupee className='h-5 w-6' /> {price}
-                    </p>
-                </div>
-                <div className="w-[45%] pt-0  p-6 ">
-                    <div className="rating">
-                        <svg viewBox="0 0 99.498 16.286" xmlns="http://www.w3.org/2000/svg" className="svg four-star-svg">
-                            <path fill="#fc0" transform="translate(-0.001 -1.047)" d="M9.357,1.558,11.282,5.45a.919.919,0,0,0,.692.5l4.3.624a.916.916,0,0,1,.509,1.564l-3.115,3.029a.916.916,0,0,0-.264.812l.735,4.278a.919.919,0,0,1-1.334.967l-3.85-2.02a.922.922,0,0,0-.855,0l-3.85,2.02a.919.919,0,0,1-1.334-.967l.735-4.278a.916.916,0,0,0-.264-.812L.279,8.14A.916.916,0,0,1,.789,6.576l4.3-.624a.919.919,0,0,0,.692-.5L7.71,1.558A.92.92,0,0,1,9.357,1.558Z" id="star-svgrepo-com" />
-                            <path fill="#fc0" transform="translate(20.607 -1.047)" d="M9.357,1.558,11.282,5.45a.919.919,0,0,0,.692.5l4.3.624a.916.916,0,0,1,.509,1.564l-3.115,3.029a.916.916,0,0,0-.264.812l.735,4.278a.919.919,0,0,1-1.334.967l-3.85-2.02a.922.922,0,0,0-.855,0l-3.85,2.02a.919.919,0,0,1-1.334-.967l.735-4.278a.916.916,0,0,0-.264-.812L.279,8.14A.916.916,0,0,1,.789,6.576l4.3-.624a.919.919,0,0,0,.692-.5L7.71,1.558A.92.92,0,0,1,9.357,1.558Z" data-name="star-svgrepo-com" id="star-svgrepo-com-2" />
-                            <path fill="#fc0" transform="translate(41.215 -1.047)" d="M9.357,1.558,11.282,5.45a.919.919,0,0,0,.692.5l4.3.624a.916.916,0,0,1,.509,1.564l-3.115,3.029a.916.916,0,0,0-.264.812l.735,4.278a.919.919,0,0,1-1.334.967l-3.85-2.02a.922.922,0,0,0-.855,0l-3.85,2.02a.919.919,0,0,1-1.334-.967l.735-4.278a.916.916,0,0,0-.264-.812L.279,8.14A.916.916,0,0,1,.789,6.576l4.3-.624a.919.919,0,0,0,.692-.5L7.71,1.558A.92.92,0,0,1,9.357,1.558Z" data-name="star-svgrepo-com" id="star-svgrepo-com-3" />
-                            <path fill="#fc0" transform="translate(61.823 -1.047)" d="M9.357,1.558,11.282,5.45a.919.919,0,0,0,.692.5l4.3.624a.916.916,0,0,1,.509,1.564l-3.115,3.029a.916.916,0,0,0-.264.812l.735,4.278a.919.919,0,0,1-1.334.967l-3.85-2.02a.922.922,0,0,0-.855,0l-3.85,2.02a.919.919,0,0,1-1.334-.967l.735-4.278a.916.916,0,0,0-.264-.812L.279,8.14A.916.916,0,0,1,.789,6.576l4.3-.624a.919.919,0,0,0,.692-.5L7.71,1.558A.92.92,0,0,1,9.357,1.558Z" data-name="star-svgrepo-com" id="star-svgrepo-com-4" />
-                            <path fill="#e9e9e9" transform="translate(82.431 -1.047)" d="M9.357,1.558,11.282,5.45a.919.919,0,0,0,.692.5l4.3.624a.916.916,0,0,1,.509,1.564l-3.115,3.029a.916.916,0,0,0-.264.812l.735,4.278a.919.919,0,0,1-1.334.967l-3.85-2.02a.922.922,0,0,0-.855,0l-3.85,2.02a.919.919,0,0,1-1.334-.967l.735-4.278a.916.916,0,0,0-.264-.812L.279,8.14A.916.916,0,0,1,.789,6.576l4.3-.624a.919.919,0,0,0,.692-.5L7.71,1.558A.92.92,0,0,1,9.357,1.558Z" data-name="star-svgrepo-com" id="star-svgrepo-com-5" />
-                        </svg>
-
-                    </div>
-                </div>
-                <div className="p-6 pt-0 w-full">
-                    <button data-ripple-light="true" type="button" className="w-full select-none rounded-lg bg-lime-600 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-lime-500/20 transition-all hover:shadow-lg hover:shadow-lime-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" onClick={handleRedirect} onClick={handleRedirect}>
-                        Buy Now
-                    </button>
-                </div>
+        <div className="relative flex w-[24%] p-4 mt-1 flex-col rounded-xl bg-lime-100 text-gray-700 shadow-md">
+            {/* Product Image */}
+            <div className="relative mx-4 -mt-0 h-32 overflow-hidden rounded-xl bg-gradient-to-r from-purple-300 to-purple-600">
+                <img src={img} alt={name} className="h-full w-full object-cover" />
             </div>
-         
-        </>
-    )
-}
 
-export default ProductCard
+            {/* Product Details */}
+            <div className="p-4">
+                <h5 className="mb-1 block font-sans text-lg font-semibold text-blue-gray-900">
+                    {name}
+                </h5>
+                <p className="font-sans leading-relaxed text-inherit font-bold flex items-center text-lg">
+                    <IndianRupee className="h-4 w-4" /> {price * quantity}
+                </p>
+                <div className="flex items-center mt-1">{renderStars()}</div>
+            </div>
+
+            {/* Quantity Label */}
+            <div className="px-4 pt-2 text-sm font-semibold text-blue-gray-900">
+                Quantity:
+            </div>
+
+            {/* Increment and Decrement Section */}
+            <div className="flex items-center justify-between p-4">
+                <button
+                    onClick={decrement}
+                    className="bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-gray-700 font-bold text-base hover:bg-gray-300"
+                >
+                    -
+                </button>
+                <span className="text-lg font-semibold">{quantity} kg</span>
+                <button
+                    onClick={increment}
+                    className="bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-gray-700 font-bold text-base hover:bg-gray-300"
+                >
+                    +
+                </button>
+            </div>
+
+            {/* Buttons Section */}
+            <div className="p-4 pt-0 w-full space-y-2">
+                <button
+                    type="button"
+                    className="w-full rounded-lg bg-lime-600 py-2 px-4 text-xs font-bold uppercase text-white shadow-md hover:shadow-lg focus:opacity-85"
+                    onClick={handleRedirect}   >
+                    Buy Now
+                </button>
+                <button
+                    onClick={handleAddToCart}
+                    type="button"
+                    className="w-full rounded-lg bg-blue-600 py-2 px-4 text-xs font-bold uppercase text-white shadow-md hover:shadow-lg focus:opacity-85"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            {/* Popup Notification */}
+            {showPopup && (
+                <div className="absolute top-4 right-4 z-50 rounded-md bg-green-500 text-white px-3 py-1 shadow-lg">
+                    Added to cart!
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default ProductCard;

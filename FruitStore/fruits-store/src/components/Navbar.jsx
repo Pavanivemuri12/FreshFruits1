@@ -121,7 +121,7 @@ const navigate = useNavigate()
       }
     return (
         <>
-            <div className='w-full h-14 shadow-lime-300 gap-2 bg-lime-500 shadow-md flex flex-row justify-center items-center'>
+            <div className='w-screen h-14 shadow-lime-300 gap-2 bg-lime-500 shadow-md flex flex-row justify-center items-center'>
             <img className="h-[7vh] w-[45px] top-10 bottom-10 border-radius-360 rounded-full flex justify-center align-center  " src={round} alt='logo' />
                 <div className='w-[40%] flex justify-start items-center font-bold text-2xl text-white'>
                     Fresh Fruits
