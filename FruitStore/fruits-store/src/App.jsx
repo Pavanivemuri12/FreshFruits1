@@ -7,7 +7,7 @@ import Location from "./pages/Location";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import BasicFruits from "./pages/BasicFruits";
-
+//import OrderForm from "./pages/Locationmap";
 import DryFruits from "./pages/DryFruits";
 import ExoticFruits from "./pages/ExoticFruits";
 import OrganicFruits from "./pages/OrganicFruits";

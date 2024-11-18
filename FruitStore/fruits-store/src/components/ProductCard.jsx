@@ -1,7 +1,12 @@
 import { IndianRupee } from 'lucide-react'
 import React from 'react'
-
+import { useNavigate } from "react-router-dom";
+import Location from '../pages/Location'
 const ProductCard = ({ img, price, name }) => {
+    const navigate=useNavigate();
+    const handleRedirect=()=>{
+      navigate("/location")
+    }
     return (
         <>
 
@@ -30,7 +35,7 @@ const ProductCard = ({ img, price, name }) => {
                     </div>
                 </div>
                 <div className="p-6 pt-0 w-full">
-                    <button data-ripple-light="true" type="button" className="w-full select-none rounded-lg bg-lime-600 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-lime-500/20 transition-all hover:shadow-lg hover:shadow-lime-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                    <button data-ripple-light="true" type="button" className="w-full select-none rounded-lg bg-lime-600 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-lime-500/20 transition-all hover:shadow-lg hover:shadow-lime-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" onClick={handleRedirect}>
                         Buy Now
                     </button>
                 </div>

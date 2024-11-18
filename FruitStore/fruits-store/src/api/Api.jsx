@@ -29,7 +29,6 @@ axiosInstance.interceptors.request.use(
 
 // ProductEndPonts
 
-<<<<<<< Updated upstream
 const addBasicFruits = (basicfruits) => axios.post(`${API}/basicfruits/add`,basicfruits)
 const addDryFruits = (dryfruits) => axios.post(`${API}/dryfruits/add`,dryfruits)
 const addExoticFruits = (exoticfruits) => axios.post(`${API}/exoticfruits/add`,exoticfruits)
@@ -38,16 +37,6 @@ const addSeasonalFruits = (seasonalfruits) => axios.post(`${API}/seasonalfruits/
 const addFruitBaskets = (fruitbaskets) => axios.post(`${API}/fruitbaskets/add`,fruitbaskets)
 const addUsers = (users) => axios.post(`${API}/users/add`,users)
 const addOrder = (orders) => axios.post(`${API}/users/add`,orders)
-=======
-const addBasicFruits = (basicfruits) => axiosInstance.post(`${API}/basicfruits/add`,basicfruits)
-const addDryFruits = (dryfruits) => axiosInstance.post(`${API}/dryfruits/add`,dryfruits)
-const addExoticFruits = (exoticfruits) => axiosInstance.post(`${API}/exoticfruits/add`,exoticfruits)
-const addOrganicFruits = (organicfruits) => axiosInstance.post(`${API}/organicfruits/add`,organicfruits)
-const addSeasonalFruits = (seasonalfruits) => axiosInstance.post(`${API}/seasonalfruits/add`,seasonalfruits)
-const addFruitBaskets = (fruitbaskets) => axiosInstance.post(`${API}/fruitbaskets/add`,fruitbaskets)
-const addUsers = (users) => axiosInstance.post(`${API}/users/add`,users)
-
->>>>>>> Stashed changes
 
 const deleteBasicFruits = (id) => axiosInstance.delete(`${API}/basicfruits/delete/${id}`)
 const deleteDryFruits = (id) => axiosInstance.delete(`${API}/dryfruits/delete/${id}`)
