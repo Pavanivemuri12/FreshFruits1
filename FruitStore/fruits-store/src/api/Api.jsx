@@ -12,7 +12,7 @@ const addOrganicFruits = (organicfruits) => axios.post(`${API}/organicfruits/add
 const addSeasonalFruits = (seasonalfruits) => axios.post(`${API}/seasonalfruits/add`,seasonalfruits)
 const addFruitBaskets = (fruitbaskets) => axios.post(`${API}/fruitbaskets/add`,fruitbaskets)
 const addUsers = (users) => axios.post(`${API}/users/add`,users)
-
+const addOrder = (orders) => axios.post(`${API}/users/add`,orders)
 
 const deleteBasicFruits = (id) => axios.delete(`${API}/basicfruits/delete/${id}`)
 const deleteDryFruits = (id) => axios.delete(`${API}/dryfruits/delete/${id}`)
@@ -51,7 +51,7 @@ export{
     getSeasonalFruits,
     getFruitBaskets,
     getOrders ,
-    
+    addOrder,
     deleteOrders,
     editOrders,
     addBasicFruits,

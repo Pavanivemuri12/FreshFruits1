@@ -3,6 +3,7 @@ import pav from "../assets/images/pav.jpg"
 import yam from "../assets/images/yam.jpg"
 import divya from "../assets/images/divya.jpg"
 import asma from "../assets/images/asma.jpg"
+import Footer from '../pages/BookMark'
 const About = () => {
   return (
     <>
@@ -105,13 +106,10 @@ const About = () => {
   </div>
 </div>
 </div>
-<br>
-</br>
 
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
+
+
 <div>
   <h1 className='font-sans-serif font-semibold text-green-500  text-center text-2xl '>Testimony</h1>
   <br>
@@ -166,6 +164,14 @@ const About = () => {
 
 </div>
 </div>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<div>
+   <Footer/>
+</div>
+          
 </>
 )
 }

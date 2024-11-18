@@ -45,7 +45,7 @@ const OrganicFruits = () => {
         return (
             <>
                 <div className='w-screen h-[90vh] flex flex-col justify-center items-center'>
-                    <Loader2 className='text-purple-500 h-14 w-14 animate-spin' />
+                    <Loader2 className='text-lime-500 h-14 w-14 animate-spin' />
                 </div>
             </>
         )
@@ -77,7 +77,7 @@ const OrganicFruits = () => {
             </div> */}
             <div className='w-screen h-full flex flex-col justify-center items-center'>
                 <div className='w-full h-[4rem] flex justify-center items-center'>
-                    <input type="text" name="" id="" value={query} onChange={handleSearch} className='w-[50%] bg-[#f5f5f7] shadow-md border-b-2 border-transparent p-2 rounded-sm focus:shadow-purple-200 focus:outline-none focus:border-b-2 focus:border-purple-500' placeholder='Filter Products'/>
+                    <input type="text" name="" id="" value={query} onChange={handleSearch} className='w-[50%] bg-[#f5f5f7] shadow-md border-b-2 border-transparent p-2 rounded-sm focus:shadow-lime-200 focus:outline-none focus:border-b-2 focus:border-lime-500' placeholder='Filter Products'/>
                 </div>
                 <div className='w-screen h-full flex justify-start items-start flex-row flex-wrap mt-14 mb-12 gap-y-20 gap-x-2'>
                 {(!fitlerProduct || fitlerProduct.length === 0) ? (

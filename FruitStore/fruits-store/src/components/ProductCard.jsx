@@ -5,9 +5,9 @@ const ProductCard = ({ img, price, name }) => {
     return (
         <>
 
-            <div className="relative flex w-[20%] -mt-1 p-4 h-[65vh] flex-col rounded-xl bg-lime-100 bg-clip-border text-gray-700 shadow-md">
+            <div className="relative flex w-[24%] p-6 mt-1 flex-col rounded-xl bg-lime-100 bg-clip-border text-gray-700 shadow-md ">
                 <div className="relative mx-4 -mt-0 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-purple-300 to-purple-600">
-                    <img src={img} alt={name} className='h-full w-full object-cover' />
+                    <img src={img} alt={name} className='h-full w-full object-cover ' />
                 </div>
                 <div className="p-6">
                     <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
