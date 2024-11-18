@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
         {/* Vegefoods Section */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Vegefoods</h2>
+          <h2 className="text-lg font-semibold mb-4">Fresh Fruits</h2>
           <p className="text-gray-600 text-sm">
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia.
