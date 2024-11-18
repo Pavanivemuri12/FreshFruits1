@@ -7,7 +7,6 @@ const Leftbar = () => {
     const Linksdata = [
       { title: 'All Categories',
          hasDropdown: true }
-
     ]  
      const allFruits = [ {
             title: 'BasicFruits',

@@ -63,6 +63,19 @@ const deleteOrders = (id) => axiosInstance.delete(`${API}/orders/delete/${id}`)
 const getUsers = () => axiosInstance.get(`${API}/users/all`)
 const Login = (credentials) => axios.post(`${API}/auth/login`, credentials)
 const Register = (credentials) => axios.post(`${API}/auth/register`, credentials)
+
+
+const getBasicFruitsCount = () => axiosInstance.get(`${API}/basicfruits/count`)
+const getDryFruitsCount = () => axiosInstance.get(`${API}/dryfruits/count`)
+const getExoticFruitsCount = () => axiosInstance.get(`${API}/exoticfruits/count`)
+const getOrganicFruitsCount = () => axiosInstance.get(`${API}/organicfruits/count`)
+const getSeasonalFruitsCount = () => axiosInstance.get(`${API}/seasonalfruits/count`)
+const getFruitBasketsCount = () => axiosInstance.get(`${API}/fruitbaskets/count`)
+const getOrdersCount = () => axiosInstance.get(`${API}/orders/count`)
+const getUsersCount = () => axiosInstance.get(`${API}/users/count`)
+
+
+
 export{
     getBasicFruits,
     getDryFruits,
@@ -108,7 +121,10 @@ export{
     deleteUsers,
     editUsers,
     Login,
-    Register
+    Register,
+    getOrdersCount, 
+    getBasicFruitsCount,
+    getDryFruitsCount,getExoticFruitsCount,getOrganicFruitsCount,getSeasonalFruitsCount,getFruitBasketsCount,getUsersCount
 
     
 }

@@ -7,7 +7,7 @@ const { validateTokenAdmin } = require('../config/auth')
 
 router.get('/count',validateTokenAdmin, async (req, res) => {
     try {
-        const count = await Ex.countDocuments()
+        const count = await SeasonalFruits.countDocuments()
         return res.status(200).json({ count: count })
     } catch (error) {
         return res.status(500).json({ message: error.message })
