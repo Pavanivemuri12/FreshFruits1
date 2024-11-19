@@ -45,7 +45,7 @@ const NewlyAdded = () => {
         return (
             <>
                 <div className='w-screen h-[90vh] flex flex-col justify-center items-center'>
-                    <Loader2 className='text-purple-500 h-14 w-14 animate-spin' />
+                    <Loader2 className='text-lime-500 h-14 w-14 animate-spin' />
                 </div>
             </>
         )

@@ -1,4 +1,5 @@
 import React from 'react'
+import { IndianRupee } from 'lucide-react'
 // import frshp from '../assets/images/frshp.jpg'
 // import quality from '../assets/images/quality.jpg'
 // import alwy from '../assets/images/alwy.jpg'
@@ -17,7 +18,7 @@ const HomeCards = () => {
       <img className="h-[15vh] w-[10vw]  top-10 bottom-10 object-contain flex justify-center align-center " src="https://pngimg.com/d/free_shipping_PNG10.png" alt='Customer' />
       <br></br>
         <p className="text-base font-bold">FREE SHIPPING</p>
-        <p className="text-sm">ON ORDER OVER $100</p>
+        <p className="text-sm flex flex-row align-baseline justify-center items-center">ON ORDER OVER<IndianRupee className=' h-[13px] w-[13px]'/>100</p>
       
       </div>
       <div className="card h-60 w-60 bg-white flex flex-col justify-center items-center hover:scale-110 hover:z-10">
